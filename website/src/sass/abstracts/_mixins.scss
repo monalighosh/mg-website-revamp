@@ -1,0 +1,71 @@
+/* Border mixins */
+// Border
+@mixin border($property, $color, $width: 1px, $style: solid) {
+  @if $property != border {
+    border-#{$property}: $width $style $color;
+  } @else {
+    #{$property}: $width $style $color;
+  }
+}
+
+// Border radius 
+/* For multiple properties, pass arguments in the form of sass list. 
+E.g. @include borderRadius(20px, (top-left, bottom-right, top-right)); */
+@mixin borderRadius($radius, $properties: null) {
+  @if $properties != null {
+    @each $property in $properties {
+      border-#{$property}-radius: $radius;
+    }
+  } @else {
+    border-radius: $radius;
+  }
+}
+
+/* Position mixins */
+@mixin position($property: relative, $top: null, $left: null, $bottom: null, $right: null) {
+  @if $property == fixed or absolute {
+    position: $property;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+  } @else {
+    position: $property;
+  }
+}
+
+/* Padding, margins mixins */
+// Pass values as a space separated sass list. E.g. @include padMrg(padding, 2em 0);
+@mixin padMrg($property, $values) {
+  #{$property}: $values;
+}
+
+/* Element display */
+@mixin display($property: inline-block) {
+  display: $property;
+}
+
+/* Animation mixins */
+// Transition 
+/* Use of rest operator allows us to add any number of transition properties */
+@mixin transition($values...) {
+  transition: $values;
+}
+
+/* Media queries */
+@mixin media($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+/* Clear floats */
+@mixin clearfix() {
+  &:before, &:after {
+    content: "";
+    @include display(table);
+  }
+  &:after {
+    clear: both;
+  }
+}

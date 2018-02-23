@@ -1,0 +1,23 @@
+body {
+  background: $white;
+  font-family: 'Barlow', sans-serif;
+}
+.light,
+.origin,
+.dark {
+  color: $blue;
+  padding: 2em;
+  margin: 1em;
+  display: inline-block;
+  overflow: hidden;
+  font-size: $h1;
+  font-weight: $bold;
+  border-top-left-radius: 20px;
+  background: darken($blue, 36%);
+}
+
+
+
+.dark {
+  background: darken($blue, 36%);
+}
