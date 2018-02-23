@@ -14,8 +14,7 @@
 } 
 
 html {
-  line-height: 1.15; /* 1 */
-  font-size: 18px;
+  font-size: 20px;
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
@@ -85,7 +84,7 @@ code,
 kbd,
 samp {
   font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-size: 1rem; /* 2 */
 }
 
 /**
@@ -143,7 +142,7 @@ select,
 textarea {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
+  line-height: 1.5; /* 1 */
   margin: 0; /* 2 */
 }
 

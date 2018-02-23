@@ -15,19 +15,23 @@ $baseFont: 'Barlow', sans-serif;
 $baseFontSize: 1rem;
 $baseFontWeight: 400;
 
+// Font weights
+$mediumBold: 500;
+$bold: 600;
+
+// Font size variations
+$smallFont: $baseFontSize / 1.5; // 13px
+$largeFont: $baseFontSize * 1.5; // 30px
+
 // Heading font sizes
-$h1: $baseFontSize * 3; // 54px
-$h2: $baseFontSize * 2; // 36px
-$h3: $baseFontSize * 1.5; // 27px
+$h1Size: $baseFontSize * 3; // 60px
+$h2Size: $baseFontSize * 2; // 40px
+$h3Size: $baseFontSize * 1.5; // 30px
 
 // Heading colors
 $h1Color: $black;
 $h2Color: $blue;
 $h3Color: $red;
-
-// Font weights
-$mediumBold: 500;
-$bold: 600;
 
 // Width
 $widthFull: 100%;
