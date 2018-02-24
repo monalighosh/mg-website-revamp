@@ -1,8 +1,9 @@
 body {
-  font: $baseFontWeight $baseFontSize $baseFont;
-  background: $white;
+  font: $light $baseFontSize $baseFont;
+  background: $blue;
   line-height: 1.8;
-  color: $grey;
+  color: $white;
+  letter-spacing: 0.05rem;
 }
 
 h1 {
@@ -20,5 +21,13 @@ h2 {
 h3 {
   font-size: $h3Size;
   color: $h3Color;
-  font-weight: $baseFontWeight;
+  font-weight: $normal;
+}
+
+.wrapper {
+  width: $fullCover;
+}
+
+main {
+  @include padMrg(margin-top, 100px);
 }

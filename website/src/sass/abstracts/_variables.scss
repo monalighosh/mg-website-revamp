@@ -6,22 +6,23 @@ $navyBlue: darken($blue, 36%);
 $turquoiseBlue: rgb(80, 235, 199); // ##50EBC7
 $white: rgb(255, 255, 255); // #ffffff
 $black: rgb(0, 0, 0); // #000000
-$grey: lighten($black, 30%);
+$grey: lighten($black, 40%);
 $yellow: rgb(249, 220, 92); // #F9DC5C
 $red: rgb(228, 63, 111);// #E43F6F
 
 // Root
-$baseFont: 'Barlow', sans-serif;
+$baseFont: 'Muli', sans-serif;
 $baseFontSize: 1rem;
-$baseFontWeight: 400;
 
 // Font weights
-$mediumBold: 500;
-$bold: 600;
+$light: 300;
+$normal: 400;
+$mediumBold: 600;
+$bold: 700;
 
 // Font size variations
 $smallFont: $baseFontSize / 1.5; // 13px
-$largeFont: $baseFontSize * 1.5; // 30px
+$largeFont: $baseFontSize * 1.2; // 30px
 
 // Heading font sizes
 $h1Size: $baseFontSize * 3; // 60px
@@ -33,6 +34,6 @@ $h1Color: $black;
 $h2Color: $blue;
 $h3Color: $red;
 
-// Width
-$widthFull: 100%;
+// Width & height
+$fullCover: 100%;
 

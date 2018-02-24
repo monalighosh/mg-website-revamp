@@ -1,0 +1,49 @@
+.header {
+  font-weight: $light;
+  overflow: hidden;
+  width: $fullCover;
+  height: 100px;
+  line-height: 100px;
+  @include padMrg(padding, 0 1.5em);
+  @include position(fixed, 0, 0);
+  // border: 1px solid white;
+
+  &__logo {
+    float: left;
+  }
+
+  &__logo-initials {
+    background: $white;
+    color: $blue;
+    font-weight: $bold;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    transform: translateY(-50%);
+    @include position(absolute, 50%);
+  }
+
+  &__logo-name {
+    font-size: $largeFont;
+     @include padMrg(margin-left, 50px);
+    font-weight: $normal;
+  }
+
+  &__nav {
+    float: right;
+  }
+
+  &__nav-list {
+    list-style-type: none;
+  }
+
+  &__nav-items {
+    @include display();
+    @include padMrg(padding, 0 1em);
+
+    &:last-child {
+      @include padMrg(padding-right, 0);
+    }
+  }
+}
