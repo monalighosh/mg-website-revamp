@@ -4,6 +4,7 @@
   width: $fullCover;
   height: 100px;
   line-height: 100px;
+  z-index: 100;
   @include padMrg(padding, 0 1.5em);
   @include position(fixed, 0, 0);
   // border: 1px solid white;
@@ -13,7 +14,7 @@
   }
 
   &__logo-initials {
-    background: $white;
+    background: $turquoiseBlue;
     color: $blue;
     font-weight: $bold;
     height: 30px;

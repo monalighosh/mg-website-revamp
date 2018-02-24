@@ -45,6 +45,11 @@ E.g. @include borderRadius(20px, (top-left, bottom-right, top-right)); */
   display: $property;
 }
 
+/* Shadows */
+@mixin shadow($property, $values...) {
+  #{$property}: $values;
+}
+
 /* Animation mixins */
 // Transition 
 /* Use of rest operator allows us to add any number of transition properties */

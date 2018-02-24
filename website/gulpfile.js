@@ -15,6 +15,7 @@ const htmlFiles = "src/**/*.html";
 const sassFiles = "src/sass/**/*.scss";
 const imageFiles = "src/images/**/*";
 const jsFiles = "src/js/**/*.js";
+const vendorFiles = "src/vendor-assets/**/*";
 
 // HTML Tasks
 gulp.task("html", function(){
@@ -47,13 +48,20 @@ gulp.task("js", function(){
   .pipe(gulp.dest("build/js"));
 });
 
+// Vendor assets
+gulp.task("vendors", function(){
+  return gulp.src(vendorFiles)
+  .pipe(gulp.dest("build/vendor-assets"));
+});
+
 // Watch Tasks
 gulp.task("watch", function(){
   gulp.watch(htmlFiles, ["html"]);
   gulp.watch(sassFiles, ["css"]);
   gulp.watch(imageFiles, ["images"]);
   gulp.watch(jsFiles, ["js"]);
+  gulp.watch(vendorFiles, ["vendors"]);
 });
 
 // Default Task
-gulp.task("default", ["html", "css", "images", "js", "watch"]);
+gulp.task("default", ["html", "css", "images", "js", "vendors", "watch"]);

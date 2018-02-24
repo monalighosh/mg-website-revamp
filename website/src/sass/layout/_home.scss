@@ -1,0 +1,50 @@
+#particles-js {
+  background: $blue;
+  height: 100vh;
+  @include position();
+}
+
+.home {
+  &__content {
+    @include position(absolute, 50%, 50%);
+    @extend %postionTransform;
+  }
+
+  &__heading {
+    color: $white;
+    @include shadow(text-shadow, 0 0 20px rgba($white, 0.3));
+
+    span {
+      background: $turquoiseBlue;
+      color: $blue;
+      @include padMrg(padding, 0.05em 0.2em);
+    }
+  }
+
+  &__social-links {
+    list-style-type: none;
+    @include padMrg(margin, 1em 0);
+  }
+
+  &__social-item {
+    @include display();
+    @include padMrg(margin-right, 2em);
+
+    svg {
+      fill: $white;
+      width: 100%;
+      height: auto;
+      max-width: 25px;
+      @include transition(all 0.3s ease-in-out);
+
+      &:hover {
+        fill: $turquoiseBlue;
+      }
+    }
+  }
+
+  ::selection {
+    background: $turquoiseBlue;
+    color: $blue;
+  }
+}
