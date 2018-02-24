@@ -1,5 +1,5 @@
 // Site colors
-$blue: rgb(5,105,255); // #0569ff
+$blue: rgb(4,90,250); // #045afa
 $blueMidDark: darken($blue, 6%);
 $blueDark: darken($blue, 25%);
 $navyBlue: darken($blue, 36%);
@@ -7,6 +7,8 @@ $turquoiseBlue: rgb(80, 235, 199); // #50EBC7
 $white: rgb(255, 255, 255); // #ffffff
 $black: rgb(0, 0, 0); // #000000
 $grey: lighten($black, 40%);
+$greyDark: lighten($black, 15%);
+$greyLight: lighten($black, 50%);
 $yellow: rgb(249, 220, 92); // #F9DC5C
 $red: rgb(228, 63, 111);// #E43F6F
 
@@ -21,7 +23,7 @@ $mediumBold: 600;
 $bold: 700;
 
 // Font size variations
-$smallFont: $baseFontSize / 1.5; // 13px
+$smallFont: $baseFontSize / 1.2; // 13px
 $largeFont: $baseFontSize * 1.2; // 30px
 
 // Heading font sizes

@@ -1,5 +1,6 @@
 #particles-js {
   background: $blue;
+  background-attachment: fixed;
   height: 100vh;
   @include position();
 }

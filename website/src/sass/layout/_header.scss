@@ -1,9 +1,9 @@
 .header {
   font-weight: $light;
-  overflow: hidden;
-  width: $fullCover;
   height: 100px;
   line-height: 100px;
+  overflow: hidden;
+  width: $fullCover;
   z-index: 100;
   @include padMrg(padding, 0 1.5em);
   @include position(fixed, 0, 0);
@@ -17,10 +17,10 @@
     color: $blue;
     font-weight: $bold;
     height: 30px;
-    width: 30px;
     line-height: 30px;
     text-align: center;
     transform: translateY(-50%);
+    width: 30px;
     @include position(absolute, 50%);
   }
 
@@ -55,21 +55,20 @@
 
   &__nav-links:hover {
     color: $turquoiseBlue;
-
   }
 
   &__nav-links:before {
+    background: $blueDark;
     content: "";
+    height: 2px;
     transform: translate(0, -120%);
     width: 0;
-    height: 2px;
-    background: $blueDark;
     @include display(block);
     @include position(absolute, 120%, 0);
     @include transition(all 0.5s ease-in-out);
   }
 
   &__nav-links:hover:before {
-    width: 100%;
+    width: $fullCover;
   }
 }
