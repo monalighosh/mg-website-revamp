@@ -34,11 +34,12 @@
       fill: $white;
       width: 100%;
       height: auto;
-      max-width: 25px;
-      @include transition(all 0.3s ease-in-out);
+      max-width: 23px;
+      @include transition(all 0.5s cubic-bezier(.17,.67,.08,1.56));
 
       &:hover {
         fill: $turquoiseBlue;
+        transform: scale(1.2);
       }
     }
   }

@@ -7,7 +7,6 @@
   z-index: 100;
   @include padMrg(padding, 0 1.5em);
   @include position(fixed, 0, 0);
-  // border: 1px solid white;
 
   &__logo {
     float: left;
@@ -27,8 +26,8 @@
 
   &__logo-name {
     font-size: $largeFont;
-     @include padMrg(margin-left, 50px);
     font-weight: $normal;
+    @include padMrg(margin-left, 50px);
   }
 
   &__nav {
@@ -46,5 +45,31 @@
     &:last-child {
       @include padMrg(padding-right, 0);
     }
+  }
+
+  &__nav-links {
+    color: $white;
+    @include position();
+    @include transition(all 0.5s ease-in-out);
+  }
+
+  &__nav-links:hover {
+    color: $turquoiseBlue;
+
+  }
+
+  &__nav-links:before {
+    content: "";
+    transform: translate(0, -120%);
+    width: 0;
+    height: 2px;
+    background: $blueDark;
+    @include display(block);
+    @include position(absolute, 120%, 0);
+    @include transition(all 0.5s ease-in-out);
+  }
+
+  &__nav-links:hover:before {
+    width: 100%;
   }
 }
