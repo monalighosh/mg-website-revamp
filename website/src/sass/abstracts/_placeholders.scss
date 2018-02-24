@@ -3,3 +3,11 @@
 %postionTransform {
   transform: translate(-50%, -50%);
 }
+
+// Section content default width
+%contentPosition {
+  width: 60%;
+  max-width: 1300px;
+  transform: translate(-50%, -50%);
+  @include position(absolute, 50%, 50%);
+}

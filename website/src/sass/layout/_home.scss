@@ -1,18 +1,18 @@
 #particles-js {
   background: $blue;
   background-attachment: fixed;
-  height: 100vh;
+  z-index: 0;
   @include position();
 }
 
 .home {
   &__content {
-    @include position(absolute, 50%, 50%);
-    @extend %postionTransform;
+    @extend %contentPosition;
   }
 
   &__heading {
     color: $white;
+    line-height: $headingLine;
     @include shadow(text-shadow, 0 0 20px rgba($white, 0.3));
 
     span {
