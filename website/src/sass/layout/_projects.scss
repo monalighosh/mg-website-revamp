@@ -1,0 +1,30 @@
+.projects {
+  background: $white;
+  @include position();
+
+  &__content {
+    color: $greyDark;
+    font-weight: $normal;
+    @extend %contentPosition;
+  }
+
+  &__gallery {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    list-style-type: none;
+    flex-wrap: wrap;
+  }
+
+  &__gallery-item {
+    flex: 1 0 33.333%;
+    height: 250px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      border: 0;
+    }
+  }
+}

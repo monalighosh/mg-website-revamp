@@ -45,9 +45,29 @@ a:link,
 a:visited {
   color: $blueMidDark;
   @include transition(all 0.5s ease);
+  @include position();
 }
 
 a:hover,
 a:active {
   color: $black;
+}
+
+a:after {
+  content: "";
+  width: $fullCover;
+  height: 1px;
+  background: $turquoiseBlue;
+  @include position(absolute, 100%, 0);
+  @include transition(all 0.5s ease);
+}
+
+a:hover:after,
+a:active:after {
+  width: 0;
+}
+
+::selection {
+  color: $white;
+  background: $blue;
 }

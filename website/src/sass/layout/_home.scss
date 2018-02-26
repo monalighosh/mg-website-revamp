@@ -11,6 +11,11 @@
     @extend %contentPosition;
   }
 
+  a:after {
+    content: "";
+    width: 0;
+  }
+
   &__heading {
     color: $white;
     line-height: $headingLine;
@@ -19,7 +24,13 @@
     span {
       background: $turquoiseBlue;
       color: $blue;
-      @include padMrg(padding, 0.05em 0.2em);
+      @include padMrg(padding, 0 0.2em);
+
+      &::selection {
+        color: $turquoiseBlue;
+        background: $blue;
+        @include shadow(text-shadow, 0 0 0 rgba($white, 0.3));
+      }
     }
   }
 
@@ -38,6 +49,8 @@
       height: auto;
       max-width: 23px;
       @include transition(all 0.5s cubic-bezier(.17,.67,.08,1.56));
+
+
 
       &:hover {
         fill: $turquoiseBlue;

@@ -3,7 +3,6 @@
   @include position();
 
   &__content {
-    // border: 1px solid black;
     color: $greyDark;
     font-weight: $normal;
     @extend %contentPosition;
@@ -15,7 +14,12 @@
     span {
       background: $blue;
       color: $white;
-      @include padMrg(padding, 0.05em 0.2em);
+      @include padMrg(padding, 0 0.2em);
+
+      &::selection {
+        color: $blue;
+        background: $white;
+      }
     }
   }
 
