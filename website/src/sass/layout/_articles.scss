@@ -1,3 +1,19 @@
 .articles {
-  background: $turquoiseBlue;
+  background: lighten($turquoiseBlue, 3%);
+  font-weight: $normal;
+  @include position();
+
+  &__content {
+    @extend %contentPosition;
+  }
+
+  &__heading {
+    line-height: $headingLine;
+    
+    span {
+      color: lighten($turquoiseBlue, 3%);
+      background: $blue;
+      @include padMrg(padding, 0 0.2em);
+    }
+  }
 }

@@ -3,7 +3,6 @@
   @include position();
 
   &__content {
-    color: $greyDark;
     font-weight: $normal;
     @extend %contentPosition;
   }
