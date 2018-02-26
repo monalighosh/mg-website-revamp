@@ -3,28 +3,85 @@
   @include position();
 
   &__content {
-    color: $greyDark;
-    font-weight: $normal;
-    @extend %contentPosition;
-  }
-
-  &__gallery {
+    width: 95%;
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
+    flex-direction: column;
+    @extend %postionTransform;
+    @include position(absolute, 50%, 50%);
+  }
+
+  &__tx-content {
+    width: 60%;
+    max-width: 1300px;
+    @include padMrg(margin-bottom, 2em);
+
+    span {
+      color: $white;
+      background: $blue;
+      @include padMrg(padding, 0 0.2em);
+    }
+  }
+
+  &__gallery-list {
     list-style-type: none;
+    display: flex;
     flex-wrap: wrap;
   }
 
   &__gallery-item {
-    flex: 1 0 33.333%;
-    height: 250px;
+    flex: 1 0 25%;
+    height: auto;
+  }
+
+  &__gallery-img {
+    cursor: pointer;
     overflow: hidden;
+    @include display(block);
+    @include position();
+
+    &:after {
+      content: "";
+      width: $fullCover;
+      height: $fullCover;
+      background: rgba($blueDark, 0.35);
+      @include position(absolute, 0, 0);
+      @include transition(all 0.3s ease-in-out);
+    }
+
+    &:hover:after {
+      background: rgba($blueDark, 0);
+    }
 
     img {
-      width: 100%;
-      height: auto;
-      border: 0;
+      max-width: none;
+      width: calc(100% + 50px);
+      opacity: 0.9;
+      display: block;
+      transform: translate3d(-40px, 0, 0);
+      @include transition(opacity 0.35s, transform 0.35s);
+    }
+
+    &:hover img {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+
+    p {
+      transform: translateX(-100%);
+      opacity: 1;
+      background: $blue;
+      color: $white;
+      @include position(absolute, 82%, 0);
+      @include padMrg(padding, 0.5em 1em);
+      @include transition(opacity 0.35s, transform 0.35s);
+    }
+
+    &:hover p {
+      opacity: 1;
+      transform: translateX(0);
+      @include position(absolute, 82%, 0);
     }
   }
 }

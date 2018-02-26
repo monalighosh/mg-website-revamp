@@ -2,7 +2,7 @@ label {
   border: 0;
   outline: none;
   @include display();
-  @include border(bottom, $greyLight);
+  @include border(bottom, $greyHighLight);
 }
 
 label {
@@ -28,7 +28,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  background: $greyLight;
+  background: $greyHighLight;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

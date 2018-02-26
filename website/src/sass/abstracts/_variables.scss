@@ -9,8 +9,8 @@ $white: rgb(255, 255, 255); // #ffffff
 $black: rgb(0, 0, 0); // #000000
 $grey: lighten($black, 40%);
 $greyDark: lighten($black, 15%);
-$greyLight: lighten($black, 80%);
-$yellow: rgb(249, 220, 92); // #F9DC5C
+$greyMedLight: lighten($black, 50%);
+$greyHighLight: lighten($black, 80%);
 $red: rgb(228, 63, 111);// #E43F6F
 
 // Root

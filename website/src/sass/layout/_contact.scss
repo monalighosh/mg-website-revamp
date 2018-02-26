@@ -41,12 +41,12 @@
         outline: none;
         width: $fullCover;
         align-items: stretch;
-        @include border(bottom, $greyLight);
+        @include border(bottom, $greyHighLight);
         @include position();
       }
 
       > div > span:after {
-        background: $greyLight;
+        background: $greyHighLight;
         content: "";
         height: 0;
         transform: translateY(-100%);
