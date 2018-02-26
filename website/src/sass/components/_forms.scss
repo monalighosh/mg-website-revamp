@@ -1,0 +1,50 @@
+label {
+  border: 0;
+  outline: none;
+  @include display();
+  @include border(bottom, $greyLight);
+}
+
+label {
+  flex: 1;
+  @include padMrg(padding, 1em 0);
+}
+
+input,
+textarea {
+  background: transparent;   
+  outline: none;  
+  border: 0; 
+  width: $fullCover;
+  @include padMrg(padding, 1em 0 1em 1em);
+  @include position();
+  @include transition(all 0.5s ease); 
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  background: $greyLight;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: lighten($black, 65%);
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: lighten($black, 65%);
+  opacity: 1;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  color: lighten($black, 65%);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: lighten($black, 65%);
+  opacity: 1;
+}

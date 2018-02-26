@@ -1,0 +1,56 @@
+button {
+  background: $blue;
+  color: $white;
+  border: 0;
+  cursor: pointer;
+  overflow: hidden;
+  font-weight: $normal;
+  @include position();
+  @include display(block);
+  @include padMrg(padding, 0.5em 0.7em);
+  @include padMrg(margin, 1em 0);
+  @include transition(all 0.4s cubic-bezier(0.7,0,0.3,1));
+
+  &:after {
+    content: "";
+    width: $fullCover;
+    height: $fullCover;
+    background: $turquoiseBlue;
+    transform: translateX(0);
+    @include position(absolute, 0, 100%);
+    @include transition(all 0.4s cubic-bezier(0.7,0,0.3,1));
+  }
+
+  span {
+    display: block;
+    @include position();
+  }
+
+  span:before {
+    content: attr(data-letters);
+    width: 0;
+    color: $blue;
+    font-weight: $normal;
+    z-index: 2;
+    overflow: hidden;
+    white-space: nowrap;
+    transform: translate(0, -50%);
+    @include position(absolute, 50%, 0);
+    @include display(block);
+    @include transition(all 0.4s cubic-bezier(0.7,0,0.3,1));
+  }
+
+  &:hover {
+    color: $blue;
+  }
+
+  &:hover:after {
+    width: $fullCover;
+    transform: translateX(-100%);
+  }
+
+  &:hover span:before {
+    width: $fullCover;
+  }
+}
+

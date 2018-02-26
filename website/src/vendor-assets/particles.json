@@ -8,13 +8,13 @@
       }
     },
     "color": {
-      "value": "#50EBC7"
+      "value": "#05dc81"
     },
     "shape": {
       "type": "circle",
       "stroke": {
         "width": 0,
-        "color": "#50EBC7"
+        "color": "#05dc81"
       }
     },
     "opacity": {

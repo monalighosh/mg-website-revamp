@@ -25,10 +25,10 @@
       </div>
       <nav class="header__nav">
         <ul class="header__nav-list">
-          <li class="header__nav-items"><a href="#home" class="header__nav-links" title="Introduction">Hello</a></li>
-          <li class="header__nav-items"><a href="#projects" class="header__nav-links" title="Projects">Projects</a></li>
-          <li class="header__nav-items"><a href="#articles" class="header__nav-links" title="Articles">Articles</a></li>
-          <li class="header__nav-items"><a href="#contact" class="header__nav-links" title="Contact">Contact</a></li>
+          <li class="header__nav-items"><a href="#home" class="header__nav-links" title="Introduction"><span data-letters="Hello">Hello</span></a></li>
+          <li class="header__nav-items"><a href="#projects" class="header__nav-links" title="Projects"><span data-letters="Projects">Projects</span></a></li>
+          <li class="header__nav-items"><a href="#articles" class="header__nav-links" title="Articles"><span data-letters="Articles">Articles</span></a></li>
+          <li class="header__nav-items"><a href="#contact" class="header__nav-links" title="Contact"><span data-letters="Contact">Contact</span></a></li>
         </ul>
       </nav>
     </header>
@@ -74,13 +74,34 @@
         <div class="contact__content">
           <h1 class="contact__heading">Let's create something great <span>together</span>!</h1>
           <h1 class="contact__heading">Get in touch</h1>
-          <p>For me design is not about pixel perfect layouts, it’s about solving problems and connecting people. I design with a user centered approach to create thoughtful experiences, & have done so with companies including: Comcast, HBO, Tindall, The Cliffs, & Fatz. I focus on designing interfaces with tools like Sketch, Framer, and Invision, & I don’t shy away from building them either.</p>
+          <p>I would love to hear from you and get to know your project! Use the form below or email me at <a href="mailto:contact@monalighosh.com" title="Email at contact@monalighosh.com">contact@monalighosh.com</a>.</p>
+          <div class="contact__form-content">
+            <form action="#" method="POST" enctype="text/plain" name="contact-form" id="contact-form">
+              <div>
+                <label for="name">Name</label>
+                <span class="contact__form--input-hover"><input type="text" id="name" placeholder="Your full name" required></span>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <span class="contact__form--input-hover"><input type="text" id="email" placeholder="Your active email id" required></span>
+              </div>
+              <div>
+                <label for="tel">Telephone number</label>
+                <span class="contact__form--input-hover"><input type="tel" id="tel" placeholder="Your number"></span>
+              </div>
+              <div>
+                <label for="message">Your message</label>
+                <span class="contact__form--input-hover"><textarea name="message" id="message" placeholder="Your message"></textarea></span>
+              </div>
+              <button type="submit"><span data-letters="Send">Send</span></button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
     <!-- Footer -->
     <footer class="page-footer">
-      &copy; 2018 by Monali Ghosh. All rights reserved.
+      &copy; 2018 Monali Ghosh. All rights reserved.
     </footer>
   </div>
 <!-- Scripts -->

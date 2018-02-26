@@ -2,7 +2,7 @@ body {
   font: $light $baseFontSize $baseFont;
   background: $blue;
   line-height: 1.8;
-  color: $white;
+  color: $greyDark;
   letter-spacing: 0.05rem;
 }
 
@@ -37,10 +37,17 @@ section {
   width: $fullCover;
 }
 
-section:nth-of-type(even) {
-  background: $white;
-}
-
 p {
   @include padMrg(margin, 1em 0);
+}
+
+a:link,
+a:visited {
+  color: $blueMidDark;
+  @include transition(all 0.5s ease);
+}
+
+a:hover,
+a:active {
+  color: $black;
 }

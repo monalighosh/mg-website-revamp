@@ -1,4 +1,5 @@
 .contact {
+  background: $white;
   @include position();
 
   &__content {
@@ -15,6 +16,45 @@
       background: $blue;
       color: $white;
       @include padMrg(padding, 0.05em 0.2em);
+    }
+  }
+
+  &__form-content {
+    overflow: hidden;
+    width: $fullCover;
+
+    #contact-form {
+      > div {
+        display: flex;
+        justify-content: flex-start;
+        @include position();
+      }
+
+      > div > span {
+        border: 0;
+        display: flex;
+        flex: 2.5;
+        outline: none;
+        width: $fullCover;
+        align-items: stretch;
+        @include border(bottom, $greyLight);
+        @include position();
+      }
+
+      > div > span:after {
+        background: $greyLight;
+        content: "";
+        height: 0;
+        transform: translateY(-100%);
+        width: $fullCover;
+        z-index: -1;
+        @include transition(all 0.5s ease); 
+        @include position(absolute, 100%, 0);
+      }
+
+      > div > span:hover:after {
+        height: $fullCover;
+      }
     }
   }
 }
