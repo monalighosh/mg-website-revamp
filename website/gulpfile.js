@@ -29,7 +29,7 @@ gulp.task("css", function(){
   return gulp.src(sassFiles)
   .pipe(sass().on("error", sass.logError))
   .pipe(autoprefixer())
-  .pipe(cleanCSS())
+  // .pipe(cleanCSS())
   .pipe(gulp.dest("build/css"))
 });
 

@@ -13,15 +13,42 @@
   }
 
   &__logo-initials {
-    background: $turquoiseBlue;
-    color: $blue;
     font-weight: $bold;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    transform: translateY(-50%);
     width: 30px;
+    height: 30px;
+    line-height: 29px;
+    text-align: center;
+    transform: translate3d(0, -50%, 0);
+    cursor: pointer;
+    perspective: 800px;
     @include position(absolute, 50%);
+
+    &:hover .header__logo-front {
+      transform: rotateY(-180deg);
+    }
+
+    &:hover .header__logo-back {
+      transform: rotateY(0deg);
+    }
+  }
+
+  &__logo-back,
+  &__logo-front {
+    backface-visibility: hidden;
+    @include position(absolute, 0, 0, 0, 0);
+    @include transition(transform 0.5s ease);
+  }
+
+  &__logo-back {
+    background: $white;
+    color: $blueDark;
+    transform: rotateY(180deg);
+  }
+
+  &__logo-front {
+    background: $turquoiseBlue;
+    color: $blueDark;
+    transform: rotateY(0deg);
   }
 
   &__logo-name {
@@ -40,11 +67,12 @@
   }
 
   &__nav-items {
+    overflow: hidden;
     @include display();
-    @include padMrg(padding, 0 0.5em);
+    @include padMrg(margin, 0 0.5em);
 
     &:last-child {
-      @include padMrg(padding-right, 0);
+      @include padMrg(margin-right, 0);
     }
   }
 
@@ -52,7 +80,6 @@
   &__nav-links:visited {
     color: $white;
     font-weight: $normal;
-    overflow: hidden;
     @include padMrg(padding, 0.2em 0.5em);
     @include position();
     @include transition(color 0.3s ease-in-out 0.3s);

@@ -2,14 +2,18 @@
   background: $blue;
   background-attachment: fixed;
   z-index: 0;
-  color: $white;
   @include position();
 }
 
 .home {
   background: $blue;
+
   &__content {
-    @extend %contentPosition;
+    width: 70%;
+    max-width: 1300px;
+    color: $white;
+    font-weight: $light;
+    @extend %positionCenter;
   }
 
   a:after {
@@ -37,10 +41,10 @@
 
   &__social-links {
     list-style-type: none;
-    @include padMrg(margin, 1em 0);
   }
 
   &__social-item {
+    // border: 1px solid white;
     @include display();
     @include padMrg(margin-right, 2em);
 
@@ -49,9 +53,8 @@
       width: 100%;
       height: auto;
       max-width: 23px;
-      @include transition(all 0.5s cubic-bezier(.17,.67,.08,1.56));
-
-
+      transform-origin: top left;
+      @include transition(all 0.3s ease-in-out);
 
       &:hover {
         fill: $turquoiseBlue;

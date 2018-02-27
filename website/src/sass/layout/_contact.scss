@@ -3,8 +3,10 @@
   @include position();
 
   &__content {
-    font-weight: $normal;
-    @extend %contentPosition;
+    width: 70%;
+    max-width: 1300px;
+    overflow: hidden;
+    @extend %positionCenter;
   }
 
   &__heading {

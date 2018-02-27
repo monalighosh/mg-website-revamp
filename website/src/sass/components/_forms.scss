@@ -16,6 +16,7 @@ textarea {
   outline: none;  
   border: 0; 
   width: $fullCover;
+  color: $greyMedLight;
   @include padMrg(padding, 1em 0 1em 1em);
   @include position();
   @include transition(all 0.5s ease); 

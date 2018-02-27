@@ -1,9 +1,10 @@
 .page-footer {
   background: $greyDark;
-  color: $greyMedLight;
+  color: lighten($black, 50%);
   font-size: $smallFont;
   font-weight: $normal;
   text-align: center;
   width: $fullCover;
-  @include padMrg(padding, 0.7em);
+  line-height: 0.9;
+  @include padMrg(padding, 1em);
 }
