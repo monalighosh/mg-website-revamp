@@ -1,11 +1,11 @@
 .contact {
   background: $white;
+  overflow: hidden;
   @include position();
 
   &__content {
     width: 70%;
     max-width: 1300px;
-    overflow: hidden;
     @extend %positionCenter;
   }
 

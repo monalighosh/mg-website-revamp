@@ -7,6 +7,7 @@
   z-index: 100;
   @include padMrg(padding, 0 1.5em);
   @include position(fixed, 0, 0);
+  @include transition(height 0.3s ease);
 
   &__logo {
     float: left;

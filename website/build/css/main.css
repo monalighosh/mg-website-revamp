@@ -459,21 +459,6 @@ a:hover,
 a:active {
   color: #262626; }
 
-a:after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background: #05dc81;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
-
-a:hover:after,
-a:active:after {
-  background: #045afa; }
-
 ::-moz-selection {
   color: white;
   background: #045afa; }
@@ -492,7 +477,9 @@ a:active:after {
   padding: 0 1.5em;
   position: fixed;
   top: 0;
-  left: 0; }
+  left: 0;
+  -webkit-transition: height 0.3s ease;
+  transition: height 0.3s ease; }
   .header__logo {
     float: left; }
   .header__logo-initials {
@@ -655,11 +642,11 @@ a:active:after {
 
 .contact {
   background: white;
+  overflow: hidden;
   position: relative; }
   .contact__content {
     width: 70%;
-    max-width: 1300px;
-    overflow: hidden; }
+    max-width: 1300px; }
   .contact__heading {
     line-height: 1.6; }
     .contact__heading span {

@@ -1,1 +1,1 @@
-"use strict";var sectionContact=document.querySelector("#contact");console.log(window.pageYOffset+", "+sectionContact.offsetTop),window.pageYOffset>=sectionContact.offsetTop&&alert("hi");
+"use strict";
