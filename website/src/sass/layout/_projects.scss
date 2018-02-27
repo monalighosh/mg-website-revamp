@@ -1,16 +1,14 @@
 .projects {
-  background: $white;
+  overflow: hidden;
   @include position();
 
   &__content {
-    font-weight: $normal;
     width: 95%;
-    // display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    @extend %postionTransform;
-    @include position(absolute, 50%, 50%);
+    @extend %positionCenter;
   }
 
   &__tx-content {

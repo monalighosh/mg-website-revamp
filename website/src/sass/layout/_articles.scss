@@ -1,10 +1,12 @@
 .articles {
   background: lighten($turquoiseBlue, 3%);
-  font-weight: $normal;
+  overflow: hidden;
   @include position();
 
   &__content {
-    @extend %contentPosition;
+    width: 70%;
+    max-width: 1300px;
+    @extend %positionCenter;
   }
 
   &__heading {

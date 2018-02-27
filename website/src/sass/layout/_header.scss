@@ -129,3 +129,10 @@
   }
 
 }
+// Comact header styles
+.compact-header {
+  background: $blue; 
+  height: 60px; 
+  line-height: 60px; 
+  box-shadow: 0 0 20px 10px rgba($black, 0.2);
+}

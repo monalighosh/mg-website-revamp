@@ -1,1 +1,1 @@
-"use strict";
+"use strict";var sectionProjects=document.querySelector("#projects"),header=document.querySelector(".header");function showCompactHeader(){window.pageYOffset>=sectionProjects.offsetTop-20?header.classList.add("compact-header"):header.classList.remove("compact-header")}window.addEventListener("scroll",showCompactHeader);

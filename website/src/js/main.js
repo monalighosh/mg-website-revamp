@@ -29,15 +29,15 @@
 // }
 
 // Display compact header pass home section
-// const sectionProjects = document.querySelector("#projects");
-// const header = document.querySelector(".header");
-// window.addEventListener("scroll", showCompactHeader);
+const sectionProjects = document.querySelector("#projects");
+const header = document.querySelector(".header");
+window.addEventListener("scroll", showCompactHeader);
 
-// function showCompactHeader() {
-//   let currentY = window.pageYOffset;
-//   let projectsY = sectionProjects.offsetTop - 20;
-//   // Check if user has scrolled upto project section, if yes, modify the header styling
-//   currentY >= projectsY ? header.style.cssText = "background: #045afa; height: 60px; line-height: 60px" : header.style.cssText = "background: transparent; height: 100px; line-height: 100px"
-// }
+function showCompactHeader() {
+  let currentY = window.pageYOffset;
+  let projectsY = sectionProjects.offsetTop - 20;
+  // Check if user has scrolled upto project section, if yes, modify the header styling
+  currentY >= projectsY ? header.classList.add("compact-header") : header.classList.remove("compact-header");
+}
 
 
