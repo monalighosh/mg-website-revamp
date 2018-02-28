@@ -45,7 +45,7 @@ gulp.task("js", function(){
   return gulp.src(jsFiles)
   .pipe(babel({presets: ["env"]}))
   .pipe(concat("all.js"))
-  .pipe(uglify())
+  // .pipe(uglify())
   .pipe(gulp.dest("build/js"));
 });
 
