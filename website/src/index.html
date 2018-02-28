@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="css/main.css">
   <!-- Favicon -->
   <link rel="icon" sizes="16x16" type="image/png" href="images/favicon.png">
+  <!-- Script - Babel polyfill -->
+  <script src="libs/polyfill.js"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -73,49 +75,49 @@
           </div>
             <ul class="projects__gallery-list">
               <li class="projects__gallery-item">
-                <span class="projects__gallery-img">
+                <span class="projects__gallery-img" id="1">
                   <img src="images/apc-thumb.jpg" alt="APC Pharma Website">
                   <p>APC Pharma Website</p>
                 </span>
               </li>
               <li class="projects__gallery-item">
-               <span class="projects__gallery-img">
+               <span class="projects__gallery-img" id="2">
                 <img src="images/ticky-bot-thumb.jpg" alt="TickyBot Website">
                 <p>TickyBot Website</p>
               </span>
               </li>
               <li class="projects__gallery-item">
-                <span class="projects__gallery-img">
+                <span class="projects__gallery-img" id="3">
                   <img src="images/drum-set-thumb.jpg" alt="Vanilla JavaScript Drum Kit">
                   <p>Vanilla JavaScript Drum Kit</p>
                 </span>
               </li>
               <li class="projects__gallery-item">
-                <span class="projects__gallery-img">
+                <span class="projects__gallery-img" id="4">
                   <img src="images/pricing-table-thumb.jpg" alt="Flexbox Pricing Table">
                   <p>Flexbox Pricing Table</p>
                 </span>
               </li>
               <li class="projects__gallery-item">
-                <span class="projects__gallery-img">
+                <span class="projects__gallery-img" id="5">
                   <img src="images/customer-manager-app-thumb.jpg" alt="Customer Manager App">
                   <p>Customer Manager App</p>
                 </span>
               </li>
               <li class="projects__gallery-item">
-                <span class="projects__gallery-img">
+                <span class="projects__gallery-img" id="6">
                   <img src="images/image-gallery-thumb.jpg" alt="Flexbox Image Gallery">
                   <p>Flexbox Image Gallery</p>
                 </span>
               </li>
               <li class="projects__gallery-item">
-                <span class="projects__gallery-img">
+                <span class="projects__gallery-img" id="7">
                   <img src="images/to-do-thumb.jpg" alt="jQuery ToDo App">
                   <p>jQuery ToDo App</p>
                 </span>
               </li>
               <li class="projects__gallery-item">
-               <span class="projects__gallery-img">
+               <span class="projects__gallery-img" id="8">
                 <img src="images/puzzle-thumb.jpg" alt="Hexagon Jigsaw Puzzle">
                 <p>Hexagon Jigsaw Puzzle</p>
               </span>
@@ -128,7 +130,7 @@
           <div class="projects__modal-wrapper projects--content-inactive">
             <div class="projects__modal-content">
               <div class="projects__modal-text"></div>
-              <div class="projects__modal-img"></div>
+              <div class="projects__modal-img"><img src="images/apc-view.jpg" alt=""></div>
             </div>
           </div>
         </div>

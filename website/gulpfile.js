@@ -7,6 +7,7 @@ const htmlmin = require("gulp-htmlmin");
 const cleanCSS = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
 const babel = require("gulp-babel");
+const babelPolyfill = require("babel-polyfill");
 const concat = require("gulp-concat");
 const imagemin = require("gulp-imagemin");
 
@@ -49,6 +50,12 @@ gulp.task("js", function(){
   .pipe(gulp.dest("build/js"));
 });
 
+// Babel polyfill to run ES6 features
+gulp.task('libs', function(){
+    return gulp.src("node_modules/babel-polyfill/dist/polyfill.js")
+    .pipe(gulp.dest('build/libs'));
+});
+
 // Vendor assets
 gulp.task("vendors", function(){
   return gulp.src(vendorFiles)
@@ -61,8 +68,9 @@ gulp.task("watch", function(){
   gulp.watch(sassFiles, ["css"]);
   gulp.watch(imageFiles, ["images"]);
   gulp.watch(jsFiles, ["js"]);
+  gulp.watch("node_modules/babel-polyfill/dist/polyfill.js", ["libs"]);
   gulp.watch(vendorFiles, ["vendors"]);
 });
 
 // Default Task
-gulp.task("default", ["html", "css", "images", "js", "vendors", "watch"]);
+gulp.task("default", ["html", "css", "images", "js", "libs", "vendors", "watch"]);
