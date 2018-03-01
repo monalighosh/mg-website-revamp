@@ -763,6 +763,7 @@ a:active {
       font-weight: 700; }
   .projects__modal-img {
     width: 60%;
+    text-align: right;
     float: right; }
   .projects__modal-close-btn {
     float: right;
@@ -894,3 +895,5 @@ a:active {
   width: 100%;
   line-height: 0.9;
   padding: 1em; }
+  .page-footer span {
+    color: #e43f6f; }

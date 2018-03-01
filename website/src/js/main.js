@@ -103,7 +103,8 @@ let projectData = [
   },];
 const modalTxDiv = document.querySelector(".projects__modal-text");
 const modalImgDiv = document.querySelector(".projects__modal-img");
-let output;
+let textOutput;
+let imgOutput;
 
 // Adds click event to gallery list (ul), modal close button and window object
 galleryList.addEventListener("click", showProjectDetails);
@@ -141,12 +142,15 @@ function appendProjectDetails(event) {
   let currentProject = event.target;
   for(let project of projectData) {
     if(project.id === parseInt(currentProject.id)) {
-      output = `<h1>${project.name}</h1>
+      textOutput = `<h1>${project.name}</h1>
                 <p>${project.work}</p>
                 <p>${project.description}</p>
-                <p>Tools used: ${project.tools}</p>`;
-      modalTxDiv.innerHTML = output;
-      modalImgDiv
+                <p>Tools used: ${project.tools}</p>
+                <p><a href="${project.demoLink}" title="Live Demo" target="_blank">Live Demo</a></p>
+                <p><a href="${project.githubLink}" title="View Github Repository" target="_blank">Github Repo</a></p>`;
+      imgOutput = `<img src="images/${project.img}" alt="${project.name} View"/>`;          
+      modalTxDiv.innerHTML = textOutput;
+      modalImgDiv.innerHTML = imgOutput;
       break;
     }
   }

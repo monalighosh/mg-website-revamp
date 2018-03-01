@@ -96,7 +96,8 @@ var projectData = [{
 }];
 var modalTxDiv = document.querySelector(".projects__modal-text");
 var modalImgDiv = document.querySelector(".projects__modal-img");
-var output = void 0;
+var textOutput = void 0;
+var imgOutput = void 0;
 
 // Adds click event to gallery list (ul), modal close button and window object
 galleryList.addEventListener("click", showProjectDetails);
@@ -141,9 +142,10 @@ function appendProjectDetails(event) {
       var project = _step.value;
 
       if (project.id === parseInt(currentProject.id)) {
-        output = "<h1>" + project.name + "</h1>\n                <p>" + project.work + "</p>\n                <p>" + project.description + "</p>\n                <p>Tools used: " + project.tools + "</p>";
-        modalTxDiv.innerHTML = output;
-        modalImgDiv;
+        textOutput = "<h1>" + project.name + "</h1>\n                <p>" + project.work + "</p>\n                <p>" + project.description + "</p>\n                <p>Tools used: " + project.tools + "</p>\n                <p><a href=\"" + project.demoLink + "\" title=\"Live Demo\" target=\"_blank\">Live Demo</a></p>\n                <p><a href=\"" + project.githubLink + "\" title=\"View Github Repository\" target=\"_blank\">Github Repo</a></p>";
+        imgOutput = "<img src=\"images/" + project.img + "\" alt=\"" + project.name + " View\"/>";
+        modalTxDiv.innerHTML = textOutput;
+        modalImgDiv.innerHTML = imgOutput;
         break;
       }
     }

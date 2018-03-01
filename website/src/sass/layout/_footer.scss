@@ -7,4 +7,8 @@
   width: $fullCover;
   line-height: 0.9;
   @include padMrg(padding, 1em);
+
+  span {
+    color: $red;
+  }
 }
