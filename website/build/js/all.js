@@ -104,7 +104,7 @@ function closeModalOnOutsideClick(e) {
 }
 
 /* 
-Function to append project details into modal
+Function to append project details into the modal
 */
 function appendProjectDetails(event) {
   var currentProject = event.target;
