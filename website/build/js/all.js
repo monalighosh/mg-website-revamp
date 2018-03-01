@@ -1,5 +1,4 @@
 "use strict";
-"use strict";
 /*
 Display compact header functionality
 */
@@ -161,6 +160,55 @@ function appendProjectDetails(event) {
     } finally {
       if (_didIteratorError) {
         throw _iteratorError;
+      }
+    }
+  }
+}
+
+/* 
+Article read more functionality
+*/
+var articleData = [{
+  id: "a1",
+  articleLink: "articles/article-how-i-write-css.html"
+}, {
+  id: "a2",
+  articleLink: "articles/article-tools-i-cant-work-without.html"
+}, {
+  id: "a3",
+  articleLink: "articles/article-javascript-hoisting.html"
+}, {
+  id: "a4",
+  articleLink: "articles/article-javascript-closures.html"
+}];
+var articleBtnsList = document.querySelector(".articles__list");
+articleBtnsList.addEventListener("click", showArticle);
+
+function showArticle(e) {
+  var articleId = e.target.parentElement.parentElement.getAttribute("id");
+  var _iteratorNormalCompletion2 = true;
+  var _didIteratorError2 = false;
+  var _iteratorError2 = undefined;
+
+  try {
+    for (var _iterator2 = articleData[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+      var article = _step2.value;
+
+      if (article.id === articleId) {
+        window.open("" + article.articleLink);
+      }
+    }
+  } catch (err) {
+    _didIteratorError2 = true;
+    _iteratorError2 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion2 && _iterator2.return) {
+        _iterator2.return();
+      }
+    } finally {
+      if (_didIteratorError2) {
+        throw _iteratorError2;
       }
     }
   }

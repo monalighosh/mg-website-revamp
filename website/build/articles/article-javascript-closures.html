@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en"><head><!-- Basic page needs --><meta charset="utf-8"><title>Monali Ghosh | Front End Desinger/Developer in Melbourne | Article</title><meta name="description" content="Experienced front end designer and developer based in Melbourne. Builds modern responsive, SEO optimised and websites and web applications."><meta name="keywords" content=""><!-- Responsive specific meta --><meta name="viewport" content="width=device-width,initial-scale=1"><!-- Fonts and icons --><link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet"><!-- CSS --><link rel="stylesheet" href="css/main.css"><!-- Favicon --><link rel="icon" sizes="16x16" type="image/jpeg" href="images/favicon.jpg"><!-- Script - Babel polyfill --><script src="libs/polyfill.js"></script></head><body><div class="wrapper"><span class="projects__modal-close-btn" title="Close window">&#10005;</span><section class="article__content"><h1>Understanding JavaScript Closures</h1><p>If you go a bit further with JavaScript, you would certainly meet one of the most crucial yet confusing aspects of JavaScript Closures. It is often confusing to use closures in JavaScript, if we don't exactly know how they work. But once mastered, it is a powerful feature of the language that you will wonder how you lived without. In this post, I’m going to attempt to explain the closures in Javascript.</p><p>First of all, let's see the definition of the Closure given by <span>Douglas Crockford,</span></p><blockquote>Closure means that an inner function always has access to the vars and parameters of its outer function, even after the outer function has returned.</blockquote><p>Before we dig deep into it, let's first understand First-class Functions and Nested Functions (or inner functions) in JavaScript.</p><h2>First-class Functions</h2><p>JavaScript treats functions as first-class citizens. When we say functions are "first class", what we mean is that functions in JavaScript are treated as objects. Just like other objects, they may be stored in arrays, passed around, assigned to variables and returned just like any other reference variable.</p><h2>Nested Functions</h2><p>In Javascript, it is possible to nest functions, so that functions may be defined inside other functions, such functions are referred to as nested or inner functions.</p><p>Nested functions have interesting scoping rules. A nested function can access any variables and parameters of the outer function(s). Consider the following example:</p><pre><code>
+        function outer() {
+          var outerName = "X";
+
+          function inner() {
+            console.log("Hi, my name is " + outerName); // `outerName` is accessible here!
+          }
+          inner(); 
+        }
+        outer(); // returns "Hi, my name is X"
+      </code></pre><p>In the above example, inner function defined inside another function outer; inner() function can access parent function’s variable, i.e. outerName. That’s closure! The variable outerName, is a closure for inner function.</p><p>Now, as per the definition above, inner() function can access outerName variable even if it will be executed separately. Let's try to understand it with this example:</p><pre><code>
+        function outer() {
+            var outerName = "X";
+
+            function inner() {
+                console.log("Hi, my name is " + outerName); 
+            }
+            return inner;
+        }
+        var newInnerFunc = outer();
+        newInnerFunc(); // returns "Hi, my name is X"
+      </code></pre><p>Ok, what’s happening here? Let’s break it down:</p><ul><li>In this example, inner function defined inside the function outer; inner function can access outer function’s variable, outerName.</li><li>return inner; returns inner function when you call outer function.</li><li>When the result of calling the outer function is assigned to the variable newInnerFunc, it references the inner function only, not the outer function.</li><li>When you call newInnerFunc(), it can still access outerName variable which is declared inside the outer function. This is a Closure. The function remembers the value, which you can access it at a later time.</li></ul><p>One important characteristic of closure is that outer variables can keep their states between multiple calls. Closures store references to the outer function’s variables; they do not store the actual value or do not store the separate copy of those varaiables, that means value of the outer variables will be changed if you change it using inner function. Confused??? Let's understand it with this example:</p><pre><code>
+        function outerCount() {
+            var counter = 0;
+
+            function addCount() {
+                return counter += 1;
+            }
+
+            return addCount;
+        }
+
+        var newCounter = outerCount();
+        console.log(newCounter()); // returns 1
+        console.log(newCounter()); // returns 2
+        console.log(newCounter()); // returns 3
+      </code></pre><p>In this example, outer function outerCount returns the inner function addCount. addCount function increases the outer variable counter to one. So calling inner function multiple time will increase the counter to one each time.</p><p>In summary, a closure is created when an inner function accesses variables from the outer function and it retains the values of all variables that are accessible to that function when it was declared even when the outer function exits.</p><p>Hopefully this post has demystified closures a bit. Happy coding!</p></section></div><!-- Scripts --><script src="js/all.js"></script></body></html>

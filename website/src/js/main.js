@@ -100,7 +100,7 @@ let projectData = [
     img: "projectview-hexagone.jpg",
     demoLink: "https://monalighosh.github.io/Hexagon-puzzle",
     githubLink: "https://github.com/monalighosh/Hexagon-puzzle"
-  },];
+  }];
 const modalTxDiv = document.querySelector(".projects__modal-text");
 const modalImgDiv = document.querySelector(".projects__modal-img");
 let textOutput;
@@ -155,6 +155,39 @@ function appendProjectDetails(event) {
     }
   }
 }
+
+/* 
+Article read more functionality
+*/
+let articleData = [
+  {
+    id: "a1",
+    articleLink: "articles/article-how-i-write-css.html"
+  },
+  {
+    id: "a2",
+    articleLink: "articles/article-tools-i-cant-work-without.html"
+  },
+  {
+    id: "a3",
+    articleLink: "articles/article-javascript-hoisting.html"
+  },
+  {
+    id: "a4",
+    articleLink: "articles/article-javascript-closures.html"
+  }];
+const articleBtnsList = document.querySelector(".articles__list");
+articleBtnsList.addEventListener("click", showArticle);
+
+function showArticle(e) {
+  let articleId = e.target.parentElement.parentElement.getAttribute("id");
+  for(let article of articleData) {
+    if(article.id === articleId) {
+      window.open(`${article.articleLink}`);
+    }
+  }
+}
+
 
 
 
