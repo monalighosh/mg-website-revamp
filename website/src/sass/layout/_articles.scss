@@ -27,13 +27,16 @@
   &__list {
     list-style-type: none;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
   }
 
   &__item {
+    // border: 1px solid red;
     background: rgba($black, 0.08);
     flex: 0 0 23%;
+    overflow: hidden;
     @include padMrg(margin, 1%);
+    @include position();
 
     h2 {
       font-size: $largeFont;
@@ -43,11 +46,57 @@
 
     p {
       @include padMrg(padding, 0 1em 1em);
+      @include transition(all 0.5s ease);
+    }
+
+    button {
+      transform: translate(-100%, -60px);
+      @include position(absolute, 100%, 0);
+      @include padMrg(margin, 1em 0 0);
+      &:after {
+        background: $white;
+      }
+    }
+
+    &:hover button {
+      transform: translate(0, -60px);
+    }
+
+    &:hover p {
+      @include padMrg(padding, 0 1em 2.5em);
+    }
+
+    &:hover span:after {
+      background: rgba($blueDark, 0);
+    }
+
+    &:hover span img {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+    @include display(block);
+    @include position();
+
+    &:after {
+      content: "";
+      width: $fullCover;
+      height: $fullCover;
+      background: rgba($blueDark, 0.35);
+      @include position(absolute, 0, 0);
+      @include transition(all 0.3s ease-in-out);
     }
 
     img {
-      max-width: $fullCover;
-      @include display(block);
+      max-width: none;
+      width: calc(100% + 50px);
+      opacity: 0.9;
+      display: block;
+      transform: translate3d(-40px, 0, 0);
+      @include transition(opacity 0.35s, transform 0.35s);
     }
   }
 }

@@ -835,23 +835,69 @@ a:active {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap; }
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap; }
   .articles__item {
     background: rgba(0, 0, 0, 0.08);
     -webkit-box-flex: 0;
         -ms-flex: 0 0 23%;
             flex: 0 0 23%;
-    margin: 1%; }
+    overflow: hidden;
+    margin: 1%;
+    position: relative; }
     .articles__item h2 {
       font-size: 1.2rem;
       color: white;
       padding: 1em 1em 0; }
     .articles__item p {
-      padding: 0 1em 1em; }
-    .articles__item img {
-      max-width: 100%;
-      display: block; }
+      padding: 0 1em 1em;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+    .articles__item button {
+      -webkit-transform: translate(-100%, -60px);
+              transform: translate(-100%, -60px);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin: 1em 0 0; }
+      .articles__item button:after {
+        background: white; }
+    .articles__item:hover button {
+      -webkit-transform: translate(0, -60px);
+              transform: translate(0, -60px); }
+    .articles__item:hover p {
+      padding: 0 1em 2.5em; }
+    .articles__item:hover span:after {
+      background: rgba(2, 45, 125, 0); }
+    .articles__item:hover span img {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0); }
+  .articles__img {
+    overflow: hidden;
+    display: block;
+    position: relative; }
+    .articles__img:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: rgba(2, 45, 125, 0.35);
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    .articles__img img {
+      max-width: none;
+      width: calc(100% + 50px);
+      opacity: 0.9;
+      display: block;
+      -webkit-transform: translate3d(-40px, 0, 0);
+              transform: translate3d(-40px, 0, 0);
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s; }
 
 .contact {
   overflow: hidden;
