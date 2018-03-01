@@ -100,3 +100,52 @@
     }
   }
 }
+
+// Article pages
+.article-page {
+  background: lighten($turquoiseBlue, 3%);
+
+  &__close-btn {
+    float: right;
+    background: $blue;
+    color: $white;
+    font-size: $largeFont;
+    font-weight: $mediumBold;
+    cursor: pointer;
+    @include padMrg(padding, 0.3em 0.7em);
+    @include transition(opacity 0.5s ease 0.5s, background 0.5s ease);
+
+    &:hover {
+      background: lighten($turquoiseBlue, 3%);
+    }
+  }
+
+  &__content {
+    background: $white;
+    width: 75%;
+    @include shadow(box-shadow, 0 0 25px 0 rgba($black, 0.3));
+    @include padMrg(margin, 2% auto 2%);
+  }
+
+  &__tx-content {
+    @include padMrg(padding, 2em);
+    @include clearfix();
+
+    h1 {
+      span {
+        background: $blue;
+        color: $white;
+        @include padMrg(padding, 0 0.2em);
+
+        &::selection {
+          color: $blue;
+          background: $white;
+        }
+      }
+    }
+
+    h2 {
+      font-size: $largeFont;
+    }
+  }
+}

@@ -899,6 +899,46 @@ a:active {
       transition: opacity 0.35s, transform 0.35s;
       transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s; }
 
+.article-page {
+  background: #05eb8a; }
+  .article-page__close-btn {
+    float: right;
+    background: #045afa;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.3em 0.7em;
+    -webkit-transition: opacity 0.5s ease 0.5s, background 0.5s ease;
+    transition: opacity 0.5s ease 0.5s, background 0.5s ease; }
+    .article-page__close-btn:hover {
+      background: #05eb8a; }
+  .article-page__content {
+    background: white;
+    width: 75%;
+    -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+    margin: 2% auto 2%; }
+  .article-page__tx-content {
+    padding: 2em; }
+    .article-page__tx-content:before, .article-page__tx-content:after {
+      content: "";
+      display: table; }
+    .article-page__tx-content:after {
+      clear: both; }
+    .article-page__tx-content h1 span {
+      background: #045afa;
+      color: white;
+      padding: 0 0.2em; }
+      .article-page__tx-content h1 span::-moz-selection {
+        color: #045afa;
+        background: white; }
+      .article-page__tx-content h1 span::selection {
+        color: #045afa;
+        background: white; }
+    .article-page__tx-content h2 {
+      font-size: 1.2rem; }
+
 .contact {
   overflow: hidden;
   position: relative; }
