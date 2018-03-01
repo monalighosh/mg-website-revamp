@@ -1,4 +1,5 @@
 "use strict";
+"use strict";
 /*
 Display compact header functionality
 */
