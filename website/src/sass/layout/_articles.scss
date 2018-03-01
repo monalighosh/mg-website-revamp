@@ -4,9 +4,14 @@
   @include position();
 
   &__content {
-    width: 70%;
-    max-width: 1300px;
+    width: 95%;
     @extend %positionCenter;
+  }
+
+  &__tx-content {
+    width: 60%;
+    max-width: 1300px;
+    @include padMrg(margin, 0 auto 2.5em);
   }
 
   &__heading {
@@ -16,6 +21,33 @@
       color: lighten($turquoiseBlue, 3%);
       background: $blue;
       @include padMrg(padding, 0 0.2em);
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &__item {
+    background: rgba($black, 0.08);
+    flex: 0 0 23%;
+    @include padMrg(margin, 1%);
+
+    h2 {
+      font-size: $largeFont;
+      color: $white;
+      @include padMrg(padding, 1em 1em 0);
+    }
+
+    p {
+      @include padMrg(padding, 0 1em 1em);
+    }
+
+    img {
+      max-width: $fullCover;
+      @include display(block);
     }
   }
 }
