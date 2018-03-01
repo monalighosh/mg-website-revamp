@@ -26,56 +26,80 @@ let projectData = [
     name: "APC Pharma",
     work: "Website",
     tools: "HTML, CSS, JavaScript",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: "projectview-apc.jpg",
+    demoLink: "http://www.apcpharma.com",
+    githubLink: "https://github.com/monalighosh/apcpharma-website-revamp"
   },
   {
     id: 2,
     name: "TickyBot",
     work: "Website (Hackathon Project)",
     tools: "HTML, CSS, JavaScript",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: "projectview-tickybot.jpg",
+    demoLink: "https://chingu-voyage3.github.io/toucans-30",
+    githubLink: "https://github.com/chingu-voyage3/toucans-30"
   },
   {
     id: 3,
     name: "Vanilla JavaScript Drum Kit",
     work: "JavaScript Project",
     tools: "HTML, CSS, JavaScript",
-    description: "An HTML page displays a collection of div elements, each containing a letter that corresponds with a key on the keyboard, and the name of the soundclip to be played when that button is clicked. When a user presses a key that matches one of the letters displayed in the div elements, the page should play the corresponding soundclip and place a temporary 'highlight' (or border) around the div. Write the JavaScript code necessary to add this functionality."
+    description: "An HTML page displays a collection of div elements, each containing a letter that corresponds with a key on the keyboard, and the name of the soundclip to be played when that button is clicked. When a user presses a key that matches one of the letters displayed in the div elements, the page should play the corresponding soundclip and place a temporary 'highlight' (or border) around the div. Write the JavaScript code necessary to add this functionality.",
+    img: "projectview-drumkit.jpg",
+    demoLink: "https://codepen.io/monalighosh/full/NyRrNZ",
+    githubLink: "https://github.com/monalighosh/JavaScript30/tree/master/Day01"
   },
   {
     id: 4,
     name: "Flexbox Pricing Table",
     work: "Flexbox Project",
     tools: "HTML, CSS",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: "projectview-pricing.jpg",
+    demoLink: "https://monalighosh.github.io/flexbox-pricing-table",
+    githubLink: "https://github.com/monalighosh/flexbox-pricing-table"
   },
   {
     id: 5,
     name: "Customer Manager App",
     work: "JavaScript Project",
     tools: "HTML, CSS, JavaScript",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: "projectview-customapp.jpg",
+    demoLink: "https://monalighosh.github.io/indexedDB-app",
+    githubLink: "https://github.com/monalighosh/indexedDB-app"
   },
   {
     id: 6,
     name: "Flexbox Image Gallery",
     work: "Flexbox Project",
     tools: "HTML, CSS, JavaScript",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: "projectview-gallery.jpg",
+    demoLink: "https://monalighosh.github.io/flexbox-image-gallery/",
+    githubLink: "https://github.com/monalighosh/flexbox-image-gallery"
   },
   {
     id: 7,
     name: "jQuery ToDo App",
     work: "jQuery Project",
     tools: "HTML, CSS, JavaScript",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: "projectview-todo.jpg",
+    demoLink: "https://monalighosh.github.io/jquery-todo-app",
+    githubLink: "https://github.com/monalighosh/jquery-todo-app"
   },
   {
     id: 8,
     name: "Hexagon Jigsaw Puzzle",
     work: "JavaScript Project",
     tools: "HTML, CSS, JavaScript",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: "projectview-hexagone.jpg",
+    demoLink: "https://monalighosh.github.io/Hexagon-puzzle",
+    githubLink: "https://github.com/monalighosh/Hexagon-puzzle"
   },];
 const modalTxDiv = document.querySelector(".projects__modal-text");
 const modalImgDiv = document.querySelector(".projects__modal-img");
@@ -122,6 +146,7 @@ function appendProjectDetails(event) {
                 <p>${project.description}</p>
                 <p>Tools used: ${project.tools}</p>`;
       modalTxDiv.innerHTML = output;
+      modalImgDiv
       break;
     }
   }
