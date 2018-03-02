@@ -239,6 +239,7 @@ function showActiveLink(e) {
       li.children[0].classList.remove("active-link");
       parent.classList.add("active-link");
       parent.classList.remove("header__nav-links");
+      break;
     }
   }
 }
