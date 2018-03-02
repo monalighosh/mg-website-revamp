@@ -147,5 +147,61 @@
     h2 {
       font-size: $largeFont;
     }
+
+    blockquote {
+      background: lighten($black, 95%);
+      border-left: 10px solid lighten($black, 75%);
+      quotes: "\201C""\201D""\2018""\2019";
+      @include padMrg(padding, 0.5em);
+      @include padMrg(margin, 1.5em 0.5em);
+
+      &:before,
+      &:after {
+        color: lighten($black, 75%);
+        font-size: $baseFontSize * 4;
+        line-height: 0.2em;
+        vertical-align: -0.4em;
+      }
+
+      &:before {
+        content: open-quote;
+        margin-right: 0.25em;
+        @include padMrg(margin-right, 0.2em);
+      }
+
+      &:after {
+        content: close-quote;
+        margin-left: 0.25em;
+        @include padMrg(margin-left, 0.2em);
+      }
+
+      p {
+        display: inline;
+      }
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      background: $black;
+      overflow-x: auto;
+      color: $turquoiseBlue;
+      line-height: 1.3em;
+      @include padMrg(padding, 1em);
+    }
+
+    code {
+      font-family: Courier, 'New Courier', monospace;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    li:before {
+      content: "\02713";
+      font-weight: $bold;
+      @include padMrg(margin-right, 0.5em);
+    }
   }
 }

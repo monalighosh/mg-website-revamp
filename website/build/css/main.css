@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* $turquoiseBlue: rgb(80, 235, 199); // #50EBC7 */
 /* Border mixins */
 /* For multiple properties, pass arguments in the form of sass list. 
@@ -938,6 +939,43 @@ a:active {
         background: white; }
     .article-page__tx-content h2 {
       font-size: 1.2rem; }
+    .article-page__tx-content blockquote {
+      background: #f2f2f2;
+      border-left: 10px solid #bfbfbf;
+      quotes: "“" "”" "‘" "’";
+      padding: 0.5em;
+      margin: 1.5em 0.5em; }
+      .article-page__tx-content blockquote:before, .article-page__tx-content blockquote:after {
+        color: #bfbfbf;
+        font-size: 4rem;
+        line-height: 0.2em;
+        vertical-align: -0.4em; }
+      .article-page__tx-content blockquote:before {
+        content: open-quote;
+        margin-right: 0.25em;
+        margin-right: 0.2em; }
+      .article-page__tx-content blockquote:after {
+        content: close-quote;
+        margin-left: 0.25em;
+        margin-left: 0.2em; }
+      .article-page__tx-content blockquote p {
+        display: inline; }
+    .article-page__tx-content pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      background: black;
+      overflow-x: auto;
+      color: #05dc81;
+      line-height: 1.3em;
+      padding: 1em; }
+    .article-page__tx-content code {
+      font-family: Courier, 'New Courier', monospace; }
+    .article-page__tx-content ul {
+      list-style-type: none; }
+    .article-page__tx-content li:before {
+      content: "\02713";
+      font-weight: 700;
+      margin-right: 0.5em; }
 
 .contact {
   overflow: hidden;
