@@ -30,7 +30,7 @@ gulp.task("css", function(){
   return gulp.src(sassFiles)
   .pipe(sass().on("error", sass.logError))
   .pipe(autoprefixer())
-  // .pipe(cleanCSS())
+  .pipe(cleanCSS())
   .pipe(gulp.dest("build/css"))
 });
 
@@ -46,7 +46,7 @@ gulp.task("js", function(){
   return gulp.src(jsFiles)
   .pipe(babel({presets: ["env"]}))
   .pipe(concat("all.js"))
-  // .pipe(uglify())
+  .pipe(uglify())
   .pipe(gulp.dest("build/js"));
 });
 
