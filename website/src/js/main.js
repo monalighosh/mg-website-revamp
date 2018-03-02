@@ -8,7 +8,7 @@ window.addEventListener("scroll", showCompactHeader);
 
 function showCompactHeader() {
   let currentY = window.pageYOffset;
-  let projectsY = sectionProjects.offsetTop - 20;
+  let projectsY = sectionProjects.offsetTop - 40;
   // Checks if user has scrolled upto project section, if yes, modify the header styling
   currentY >= projectsY ? header.classList.add("compact-header") : header.classList.remove("compact-header");
 }
@@ -188,7 +188,45 @@ function showArticle(e) {
   }
 }
 
+/* 
+Page smooth scroll functionality
+*/
+const navList = document.querySelector(".header__nav-list");
+navList.addEventListener("click", scrollToSection);
+let distance = 40;
+let speed = 15;
+let scrollY = 0;
 
+function scrollToSection(e) {
+  e.preventDefault();
+  // Returns the id attribute of the section
+  let parentId = (e.target.parentElement).getAttribute("href");
+  // Returns the pixel value the window has been scrolled
+  let windowY = window.pageYOffset; 
+  // Returns the  pixel value of the section's position relative to the top
+  let sectionY = document.querySelector(parentId).offsetTop; 
+  // Returns the pixel value of body element's total height
+  let bodyHeight = document.body.offsetHeight;
+  // To check if it is page bottom
+  let yPos = windowY + window.innerHeight;
+  // To scroll window smoothly at given speed
+  let animator = setTimeout(() => {scrollToSection(e)}, speed);
+  // Checks if 
+  if(yPos > bodyHeight) {
+    clearTimeout(animator);
+  } else {
+    if(windowY < sectionY - distance) {
+      scrollY = windowY + distance;
+      window.scrollTo(0, scrollY);
+    } else if (windowY > sectionY) {
+      scrollY = windowY - distance;
+      window.scrollTo(0, scrollY);
+    } else {
+      clearTimeout(animator);
+    }
+  }
+  console.log(windowY, sectionY);
+}
 
 
 
