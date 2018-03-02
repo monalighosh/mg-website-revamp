@@ -3,6 +3,8 @@
 Display compact header functionality
 */
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 var sectionProjects = document.querySelector("#projects");
 var header = document.querySelector(".header");
 window.addEventListener("scroll", showCompactHeader);
@@ -219,6 +221,7 @@ Page smooth scroll functionality
 */
 var navList = document.querySelector(".header__nav-list");
 navList.addEventListener("click", scrollToSection);
+navList.addEventListener("click", showActiveLink);
 var distance = 40;
 var speed = 15;
 var scrollY = 0;
@@ -226,7 +229,8 @@ var scrollY = 0;
 function scrollToSection(e) {
   e.preventDefault();
   // Returns the id attribute of the section
-  var parentId = e.target.parentElement.getAttribute("href");
+  var parent = e.target.parentElement;
+  var parentId = parent.getAttribute("href");
   // Returns the pixel value the window has been scrolled
   var windowY = window.pageYOffset;
   // Returns the  pixel value of the section's position relative to the top
@@ -253,5 +257,39 @@ function scrollToSection(e) {
       clearTimeout(animator);
     }
   }
-  console.log(windowY, sectionY);
+}
+
+// Function to add\ active class to the link button
+var lis = [].concat(_toConsumableArray(document.querySelectorAll(".header__nav-items")));
+function showActiveLink(e) {
+  var parent = e.target.parentElement;
+  var _iteratorNormalCompletion3 = true;
+  var _didIteratorError3 = false;
+  var _iteratorError3 = undefined;
+
+  try {
+    for (var _iterator3 = lis[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+      var li = _step3.value;
+
+      if (li.children[0].classList.contains("active-link")) {
+        li.children[0].classList.add("header__nav-links");
+        li.children[0].classList.remove("active-link");
+        parent.classList.add("active-link");
+        parent.classList.remove("header__nav-links");
+      }
+    }
+  } catch (err) {
+    _didIteratorError3 = true;
+    _iteratorError3 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion3 && _iterator3.return) {
+        _iterator3.return();
+      }
+    } finally {
+      if (_didIteratorError3) {
+        throw _iteratorError3;
+      }
+    }
+  }
 }

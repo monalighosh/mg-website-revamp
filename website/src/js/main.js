@@ -193,6 +193,7 @@ Page smooth scroll functionality
 */
 const navList = document.querySelector(".header__nav-list");
 navList.addEventListener("click", scrollToSection);
+navList.addEventListener("click", showActiveLink);
 let distance = 40;
 let speed = 15;
 let scrollY = 0;
@@ -200,7 +201,8 @@ let scrollY = 0;
 function scrollToSection(e) {
   e.preventDefault();
   // Returns the id attribute of the section
-  let parentId = (e.target.parentElement).getAttribute("href");
+  let parent = e.target.parentElement;
+  let parentId = parent.getAttribute("href");
   // Returns the pixel value the window has been scrolled
   let windowY = window.pageYOffset; 
   // Returns the  pixel value of the section's position relative to the top
@@ -225,7 +227,20 @@ function scrollToSection(e) {
       clearTimeout(animator);
     }
   }
-  console.log(windowY, sectionY);
+}
+
+// Function to add\ active class to the link button
+const lis = [...document.querySelectorAll(".header__nav-items")];
+function showActiveLink(e) {
+  let parent = e.target.parentElement;
+  for(let li of lis) {
+    if(li.children[0].classList.contains("active-link")) {
+      li.children[0].classList.add("header__nav-links");
+      li.children[0].classList.remove("active-link");
+      parent.classList.add("active-link");
+      parent.classList.remove("header__nav-links");
+    }
+  }
 }
 
 
