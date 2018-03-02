@@ -180,7 +180,7 @@ const articleBtnsList = document.querySelector(".articles__list");
 articleBtnsList.addEventListener("click", showArticle);
 
 function showArticle(e) {
-  let articleId = e.target.parentElement.parentElement.getAttribute("id");
+  let articleId = e.target.parentElement.parentElement.getAttribute("id") || e.target.parentElement.getAttribute("id");
   for(let article of articleData) {
     if(article.id === articleId) {
       window.open(`${article.articleLink}`);

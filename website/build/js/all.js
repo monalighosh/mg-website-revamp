@@ -185,7 +185,7 @@ var articleBtnsList = document.querySelector(".articles__list");
 articleBtnsList.addEventListener("click", showArticle);
 
 function showArticle(e) {
-  var articleId = e.target.parentElement.parentElement.getAttribute("id");
+  var articleId = e.target.parentElement.parentElement.getAttribute("id") || e.target.parentElement.getAttribute("id");
   var _iteratorNormalCompletion2 = true;
   var _didIteratorError2 = false;
   var _iteratorError2 = undefined;
