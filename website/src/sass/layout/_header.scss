@@ -20,7 +20,7 @@
     line-height: 29px;
     text-align: center;
     transform: translate3d(0, -50%, 0);
-    cursor: pointer;
+    cursor: default;
     perspective: 800px;
     @include position(absolute, 50%);
 
