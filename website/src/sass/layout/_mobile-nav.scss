@@ -1,12 +1,22 @@
+.mobile-nav-btn {
+  @include display(none);
+}
+
 .mobile-nav {
-  
+  width: 170px;
+  z-index: 50;
+  height: 100vh;
+  background: rgba($black, 0.2);
+  @include position(absolute, $right: 0);
+  @include transition(all 0.5s ease-in-out);
+
   &__list {
     list-style-type: none;
-    background: rgba($blue, 0.5);
-    border: 1px solid red;
   }
 
   &__items {
     @include display(block);
+    @include padMrg(padding, 1em);
+    @include border(bottom, rgba($white, 0.3));
   }
 }
