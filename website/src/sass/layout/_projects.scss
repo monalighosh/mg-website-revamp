@@ -1,16 +1,54 @@
 .projects {
-  overflow: hidden;
   @include position();
 
   &__content {
-    width: 95%;
-    @extend %positionCenter;
+    border: 1px solid red;
+    @include padMrg(margin, 0 auto);
+    @include padMrg(padding, 15em 0);
   }
 
   &__tx-content {
-    width: 60%;
+    border: 1px solid red;
+    width: 100%;
     max-width: 1300px;
     @include padMrg(margin, 0 auto 2.5em);
+
+    @include media(1550px) {
+      width: 100%;
+      max-width: 1150px;
+    }
+
+    @include media(1350px) {
+      max-width: 1000px;
+    }
+
+    @include media(1150px) {
+      max-width: 900px;
+    }
+
+    @include media(950px) {
+      max-width: 750px;
+    }
+
+    @include media(750px) {
+      max-width: 600px;
+    }
+
+    @include media(650px) {
+      max-width: 550px;
+    }
+
+    @include media(550px) {
+      max-width: 450px;
+    }
+
+    @include media(450px) {
+      max-width: 350px;
+    }
+
+    @include media(350px) {
+      max-width: 300px;
+    }
   }
 
   &__heading {
@@ -37,6 +75,18 @@
   &__gallery-item {
     flex: 1 0 25%;
     height: auto;
+
+    @include media(1350px) {
+      flex: 1 0 33.33%;
+    }
+
+    @include media(950px) {
+      flex: 1 0 50%;
+    }
+
+    @include media(550px) {
+     flex: 1 0 100%;
+    }
   }
 
   &__gallery-img {
@@ -73,19 +123,18 @@
     }
 
     p {
-      transform: translateX(-100%);
       opacity: 1;
       background: $blue;
       color: $white;
-      @include position(absolute, 82%, 0);
+      transform: translate3d(-100%, -95%, 0);
+      @include position(absolute, 95%);
       @include padMrg(padding, 0.5em 1em);
       @include transition(opacity 0.35s, transform 0.35s);
     }
 
     &:hover p {
       opacity: 1;
-      transform: translateX(0);
-      @include position(absolute, 82%, 0);
+      transform: translate3d(0, -95%, 0);
     }
   }
 

@@ -1,8 +1,8 @@
 #particles-js {
   background: $blue;
-  background-attachment: fixed;
   z-index: 0;
   overflow: hidden;
+  height: 100vh;
   @include position();
 }
 
@@ -10,8 +10,7 @@
   background: $blue;
 
   &__content {
-    width: 70%;
-    max-width: 1300px;
+    border: 1px solid red;
     color: $white;
     font-weight: $light;
     @extend %positionCenter;

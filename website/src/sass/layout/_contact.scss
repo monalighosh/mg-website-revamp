@@ -1,11 +1,10 @@
 .contact {
-  overflow: hidden;
   @include position();
 
   &__content {
-    width: 70%;
-    max-width: 1300px;
-    @extend %positionCenter;
+    border: 1px solid red;
+    @include padMrg(margin, 0 auto);
+    @include padMrg(padding, 15em 0);
   }
 
   &__heading {
@@ -32,6 +31,10 @@
         display: flex;
         justify-content: flex-start;
         @include position();
+
+        @include media(750px) {
+          flex-direction: column;
+        }
       }
 
       > div > span {
@@ -43,6 +46,11 @@
         align-items: stretch;
         @include border(bottom, $greyHighLight);
         @include position();
+
+        @include media(750px) {
+          @include border(left, $greyHighLight);
+          @include border(right, $greyHighLight);
+        }
       }
 
       > div > span:after {

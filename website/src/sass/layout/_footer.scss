@@ -8,6 +8,10 @@
   line-height: 0.9;
   @include padMrg(padding, 1em);
 
+  @include media(650px) {
+    line-height: 1.4;
+  }
+
   span {
     color: $red;
   }

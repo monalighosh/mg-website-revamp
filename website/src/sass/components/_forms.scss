@@ -1,13 +1,14 @@
 label {
   border: 0;
   outline: none;
+  flex: 1;
   @include display();
   @include border(bottom, $greyHighLight);
-}
-
-label {
-  flex: 1;
   @include padMrg(padding, 1em 0);
+
+  @include media(750px) {
+    // background: $greyHighLight;
+  }
 }
 
 input,
@@ -20,6 +21,10 @@ textarea {
   @include padMrg(padding, 1em 0 1em 1em);
   @include position();
   @include transition(all 0.5s ease); 
+
+  @include media(750px) {
+    @include padMrg(padding, 0.7em 0 0.7em 0.7em);
+  }
 }
 
 textarea {

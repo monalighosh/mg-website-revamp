@@ -1,17 +1,55 @@
 .articles {
   background: lighten($turquoiseBlue, 3%);
-  overflow: hidden;
   @include position();
 
   &__content {
-    width: 95%;
-    @extend %positionCenter;
+    border: 1px solid red;
+    @include padMrg(margin, 0 auto);
+    @include padMrg(padding, 15em 0);
   }
 
   &__tx-content {
-    width: 60%;
+    border: 1px solid red;
+    width: 100%;
     max-width: 1300px;
     @include padMrg(margin, 0 auto 2.5em);
+
+    @include media(1550px) {
+      width: 100%;
+      max-width: 1150px;
+    }
+
+    @include media(1350px) {
+      max-width: 1000px;
+    }
+
+    @include media(1150px) {
+      max-width: 900px;
+    }
+
+    @include media(950px) {
+      max-width: 750px;
+    }
+
+    @include media(750px) {
+      max-width: 600px;
+    }
+
+    @include media(650px) {
+      max-width: 550px;
+    }
+
+    @include media(550px) {
+      max-width: 450px;
+    }
+
+    @include media(450px) {
+      max-width: 350px;
+    }
+
+    @include media(350px) {
+      max-width: 300px;
+    }
   }
 
   &__heading {
@@ -26,17 +64,29 @@
 
   &__list {
     list-style-type: none;
-    display: flex;
     flex-flow: row nowrap;
+    @include display(flex);
+
+    @include media(1150px) {
+      flex-flow: row wrap;
+    }
   }
 
   &__item {
-    // border: 1px solid red;
     background: rgba($black, 0.08);
     flex: 0 0 23%;
     overflow: hidden;
     @include padMrg(margin, 1%);
     @include position();
+
+    @include media(1150px) {
+      flex: 1 0 45%;
+    }
+
+    @include media(550px) {
+     flex: 1 0 100%;
+     @include padMrg(margin, 2% 0);
+    }
 
     h2 {
       font-size: $largeFont;

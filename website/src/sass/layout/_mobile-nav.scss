@@ -1,0 +1,12 @@
+.mobile-nav {
+  
+  &__list {
+    list-style-type: none;
+    background: rgba($blue, 0.5);
+    border: 1px solid red;
+  }
+
+  &__items {
+    @include display(block);
+  }
+}

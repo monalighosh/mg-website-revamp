@@ -1,3 +1,6 @@
+html {
+  height:100%;
+}
 body {
   font: $normal $baseFontSize $baseFont;
   background: $white;
@@ -6,12 +9,33 @@ body {
   letter-spacing: 0.06rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height:100%;
 }
 
 h1 {
   font-size: $h1Size;
   color: $h1Color;
   font-weight: $bold;
+
+  @include media(1350px) {
+    font-size: $baseFontSize * 2.7;
+  }
+
+  @include media(1150px) {
+    font-size: $baseFontSize * 2.5;
+  }
+
+  @include media(950px) {
+    font-size: $baseFontSize * 2.3;
+  }
+
+  @include media(550px) {
+    font-size: $baseFontSize * 2.1;
+  }
+
+  @include media(450px) {
+    font-size: $baseFontSize * 2;
+  }
 }
 
 h2 {
@@ -28,16 +52,17 @@ h3 {
 
 .wrapper {
   width: $fullCover;
+  height: $fullCover;
+  @include position();
 }
 
 main {
-  // @include padMrg(margin-top, 100px);
+  width: $fullCover;
+  @include position();
 }
 
 section {
-  min-height: 100vh;
   width: $fullCover;
-  overflow-x: hidden;
 }
 
 p {
@@ -73,4 +98,50 @@ a:active {
 ::selection {
   color: $white;
   background: $blue;
+}
+
+.content-center-width {
+  width: 70%;
+  max-width: 1300px;
+
+  @include media(1550px) {
+    width: 100%;
+    max-width: 1150px;
+  }
+
+  @include media(1350px) {
+    max-width: 1000px;
+  }
+
+  @include media(1150px) {
+    max-width: 900px;
+  }
+
+  @include media(950px) {
+    max-width: 750px;
+  }
+
+  @include media(750px) {
+    max-width: 600px;
+  }
+
+  @include media(650px) {
+    max-width: 550px;
+  }
+
+  @include media(550px) {
+    max-width: 450px;
+  }
+
+  @include media(450px) {
+    max-width: 350px;
+  }
+
+  @include media(350px) {
+    max-width: 300px;
+  }
+}
+
+.content-full-width {
+  width: 95%;
 }
