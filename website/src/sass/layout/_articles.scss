@@ -8,7 +8,6 @@
   }
 
   &__tx-content {
-    border: 1px solid red;
     width: 100%;
     max-width: 1300px;
     @include padMrg(margin, 0 auto 2.5em);
@@ -138,7 +137,7 @@
       content: "";
       width: $fullCover;
       height: $fullCover;
-      background: rgba($blueDark, 0.35);
+      background: rgba($blueDark, 0.25);
       @include position(absolute, 0, 0);
       @include transition(all 0.3s ease-in-out);
     }
@@ -156,7 +155,7 @@
 
 // Article pages
 .article-page {
-  background: lighten($turquoiseBlue, 3%);
+  // background: lighten($turquoiseBlue, 3%);
 
   &__close-btn {
     float: right;
@@ -199,6 +198,13 @@
 
     h2 {
       font-size: $largeFont;
+      @include padMrg(margin-bottom, 1em);
+    }
+
+    h3 {
+      font-size: $mediumFont;
+      color: $black;
+      font-weight: $mediumBold;
     }
 
     blockquote {
@@ -252,7 +258,7 @@
     }
 
     li:before {
-      content: "\02713";
+      content: "\0274D";
       font-weight: $bold;
       @include padMrg(margin-right, 0.5em);
     }

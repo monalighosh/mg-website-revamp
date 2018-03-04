@@ -107,7 +107,48 @@ let projectData = [
     img: "projectview-hexagone.jpg",
     demoLink: "https://monalighosh.github.io/Hexagon-puzzle",
     githubLink: "https://github.com/monalighosh/Hexagon-puzzle"
-  }];
+  },
+  {
+    id: 9,
+    name: "Flex Panels Image Gallery",
+    work: "Flexbox and JavaScript Project",
+    tools: "HTML, CSS, JavaScript",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: "projectview-flex-panel-gallery.jpg",
+    demoLink: "https://codepen.io/monalighosh/full/QQpzoy",
+    githubLink: "https://github.com/monalighosh/JavaScript30/tree/master/Day05"
+  },
+  {
+    id: 10,
+    name: "Innovative Image Gallery",
+    work: "JavaScript Project",
+    tools: "HTML, CSS, JavaScript",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: "projectview-innovative-gallery.jpg",
+    demoLink: "https://codepen.io/monalighosh/full/QQpzoy",
+    githubLink: "https://github.com/monalighosh/JavaScript30/tree/master/Day05"
+  },
+  {
+    id: 11,
+    name: "Update CSS Variables with JS",
+    work: "CSS and JavaScript Project",
+    tools: "HTML, CSS, JavaScript",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: "projectview-css-variables.jpg",
+    demoLink: "https://codepen.io/monalighosh/full/gvgaRz",
+    githubLink: "https://github.com/monalighosh/JavaScript30/tree/master/Day03"
+  },
+  {
+    id: 12,
+    name: "CSS + Vanilla JS Clock",
+    work: "CSS and JavaScript Project",
+    tools: "HTML, CSS, JavaScript",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: "projectview-clock.jpg",
+    demoLink: "https://codepen.io/monalighosh/full/ddOMOY",
+    githubLink: "https://github.com/monalighosh/JavaScript30/tree/master/Day02"
+  }
+  ];
 const modalTxDiv = document.querySelector(".projects__modal-text");
 const modalImgDiv = document.querySelector(".projects__modal-img");
 let textOutput;
@@ -169,20 +210,21 @@ Article read more functionality
 let articleData = [
   {
     id: "a1",
-    articleLink: "articles/article-how-i-write-css.html"
-  },
-  {
-    id: "a2",
     articleLink: "articles/article-tools-i-cant-work-without.html"
   },
   {
-    id: "a3",
+    id: "a2",
     articleLink: "articles/article-javascript-hoisting.html"
   },
   {
-    id: "a4",
+    id: "a3",
     articleLink: "articles/article-javascript-closures.html"
-  }];
+  },
+  {
+    id: "a4",
+    articleLink: "articles/article-aria-landmark-roles.html"
+  }
+  ];
 const articleBtnsList = document.querySelector(".articles__list");
 articleBtnsList.addEventListener("click", showArticle);
 
