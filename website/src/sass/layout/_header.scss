@@ -21,12 +21,10 @@
     font-weight: $bold;
     width: 30px;
     height: 30px;
-    line-height: 29px;
     text-align: center;
     transform: translate3d(0, -50%, 0);
     cursor: default;
     perspective: 800px;
-    font-family: 'Philosopher', sans-serif;
     overflow: hidden;
     @include position(absolute, 50%);
 

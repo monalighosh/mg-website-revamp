@@ -46,7 +46,7 @@
 .mobile-nav {
   z-index: 200;
   width: 100%;
-  background: rgba($blue, 0.5);
+  background: rgba($blue, 1);
   @include position(fixed, 0, 0, 0, 0);
   @include transition(transform 0.5s cubic-bezier(0.77, 0, 0.175, 1));
 
