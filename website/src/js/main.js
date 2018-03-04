@@ -245,6 +245,18 @@ function showActiveLink(e) {
 }
 
 
+/* 
+Mobile nav functionality
+*/
+
+const mobileNavBtn = document.querySelector(".mobile-nav-btn");
+mobileNavBtn.addEventListener("click", showMobileNav);
+const mobileNav = document.querySelector(".mobile-nav");
+
+function showMobileNav(e) {
+  mobileNav.classList.toggle("mobile-nav--active");
+}
+
 
 
 

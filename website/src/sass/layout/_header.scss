@@ -5,6 +5,7 @@
   overflow: hidden;
   width: $fullCover;
   z-index: 100;
+  border: 1px solid red;
   @include padMrg(padding, 0 1.5em);
   @include position(fixed, 0, 0);
   @include transition(height 0.3s ease);

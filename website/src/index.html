@@ -20,18 +20,14 @@
   <script src="libs/polyfill.js"></script>
 </head>
 <body>
-  <input type="checkbox" id="mobile-nav" class="mobile-nav-btn"/>
-  <label for="mobile-nav"></label>
   <div class="wrapper">
     <!-- Mobile menu -->
-    <div class="mobile-nav">
-      <ul class="mobile-nav__list">
-        <li class="mobile-nav__items"><a href="#home" class="active-link" title="Introduction"><span data-letters="Hello">Hello</span></a></li>
-        <li class="mobile-nav__items"><a href="#projects" class="header__nav-links" title="Projects"><span data-letters="Projects">Projects</span></a></li>
-        <li class="mobile-nav__items"><a href="#articles" class="header__nav-links" title="Articles"><span data-letters="Articles">Articles</span></a></li>
-        <li class="mobile-nav__items"><a href="#contact" class="header__nav-links" title="Contact"><span data-letters="Contact">Contact</span></a></li>
-      </ul>
+    <div class="mobile-nav-btn" title="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+
     <!-- Header -->
     <header class="header">
       <div class="header__logo">
@@ -43,10 +39,19 @@
       </div>
       <nav class="header__nav">
         <ul class="header__nav-list">
-          <li class="header__nav-items"><a href="#home" class="active-link" title="Introduction"><span data-letters="Hello">Hello</span></a></li>
+          <li class="header__nav-items"><a href="#home" class="header__nav-links" title="Introduction"><span data-letters="Hello">Hello</span></a></li>
           <li class="header__nav-items"><a href="#projects" class="header__nav-links" title="Projects"><span data-letters="Projects">Projects</span></a></li>
           <li class="header__nav-items"><a href="#articles" class="header__nav-links" title="Articles"><span data-letters="Articles">Articles</span></a></li>
           <li class="header__nav-items"><a href="#contact" class="header__nav-links" title="Contact"><span data-letters="Contact">Contact</span></a></li>
+        </ul>
+      </nav>
+      <nav class="mobile-nav mobile-nav--inactive">
+        <span class="mobile-nav__close-btn" title="Close window">&#10005;</span>
+        <ul class="mobile-nav__list">
+          <li class="mobile-nav__items"><a href="#home" class="header__nav-links" title="Introduction"><span data-letters="Hello">Hello</span></a></li>
+          <li class="mobile-nav__items"><a href="#projects" class="header__nav-links" title="Projects"><span data-letters="Projects">Projects</span></a></li>
+          <li class="mobile-nav__items"><a href="#articles" class="header__nav-links" title="Articles"><span data-letters="Articles">Articles</span></a></li>
+          <li class="mobile-nav__items"><a href="#contact" class="header__nav-links" title="Contact"><span data-letters="Contact">Contact</span></a></li>
         </ul>
       </nav>
     </header>
