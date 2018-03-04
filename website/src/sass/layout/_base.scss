@@ -37,6 +37,10 @@ h1 {
   @include media(450px) {
     font-size: $baseFontSize * 2;
   }
+
+  @include media(350px) {
+    font-size: $baseFontSize * 1.8;
+  }
 }
 
 h2 {
@@ -122,24 +126,28 @@ a:active {
     max-width: 750px;
   }
 
+  @include media(850px) {
+    max-width: 650px;
+  }
+
   @include media(750px) {
     max-width: 600px;
   }
 
   @include media(650px) {
-    max-width: 550px;
+    max-width: 500px;
   }
 
   @include media(550px) {
-    max-width: 450px;
+    max-width: 400px;
   }
 
   @include media(450px) {
-    max-width: 350px;
+    max-width: 300px;
   }
 
   @include media(350px) {
-    max-width: 300px;
+    max-width: 275px;
   }
 }
 

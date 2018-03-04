@@ -5,10 +5,13 @@
   overflow: hidden;
   width: $fullCover;
   z-index: 100;
-  border: 1px solid red;
   @include padMrg(padding, 0 1.5em);
   @include position(fixed, 0, 0);
   @include transition(height 0.3s ease);
+
+  @include media(550px) {
+    @include padMrg(padding, 0 1em);
+  }
 
   &__logo {
     float: left;
@@ -25,6 +28,12 @@
     perspective: 800px;
     font-family: 'Philosopher', sans-serif;
     @include position(absolute, 50%);
+
+    @include media(550px) {
+      width: 28px;
+      height: 28px;
+      line-height: 27px;
+    }
 
     &:hover .header__logo-front {
       transform: rotateY(-180deg);
@@ -59,10 +68,19 @@
     font-weight: $normal;
     color: $white;
     @include padMrg(margin-left, 50px);
+
+    @include media(550px) {
+      font-size: $baseFontSize * 1.05;
+      @include padMrg(margin-left, 45px);
+    }
   }
 
   &__nav {
     float: right;
+
+    @include media(850px) {
+      @include display(none);
+    }
   }
 
   &__nav-list {

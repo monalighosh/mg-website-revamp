@@ -2,7 +2,6 @@
   @include position();
 
   &__content {
-    border: 1px solid red;
     @include padMrg(margin, 0 auto);
     @include padMrg(padding, 15em 0);
   }

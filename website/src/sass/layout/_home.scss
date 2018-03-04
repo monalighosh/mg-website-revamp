@@ -10,7 +10,6 @@
   background: $blue;
 
   &__content {
-    border: 1px solid red;
     color: $white;
     font-weight: $light;
     @extend %positionCenter;

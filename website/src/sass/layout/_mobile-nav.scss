@@ -1,9 +1,20 @@
 .mobile-nav-btn {
-  width: 35px;
+  width: 2rem;
   z-index: 110;
   border: 0;
   cursor: pointer;
-  @include position(fixed, $top: 38px,  $right: 1em);
+  @include display(none);
+  @include position(fixed, $top: 38px,  $right: 1.2em);
+  @include transition(transform 0.5s ease 0.1s);
+
+  @include media(850px) {
+    @include display(block);
+  }
+
+  @include media(550px) {
+    width: 1.6rem;
+    right: 1em;
+  }
 
   span {
     background: $white;
@@ -13,6 +24,10 @@
     @include padMrg(margin-bottom, 8px);
     @include display(block);
     @include transition(all 0.3s ease-in-out);
+
+    @include media(550px) {
+      @include padMrg(margin-bottom, 7px);
+    }
 
     &:nth-of-type(2) {
       width: 70%;
@@ -30,48 +45,50 @@
 
 .mobile-nav {
   z-index: 200;
-  background: rgba($blue, 1);
+  width: 100%;
+  background: rgba($blue, 0.5);
   @include position(fixed, 0, 0, 0, 0);
+  @include transition(transform 0.5s cubic-bezier(0.77, 0, 0.175, 1));
 
   &--inactive {
-    width: 0;
-    transform: translate3d(-100%, 0, 0);
-    opacity: 0;
-    @include transition(transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s, width 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s, opacity 1s ease 0.5s);
+    transform: translate3d(200%, 0, 0);
   }
 
   &--active {
-    width: 100%;
     transform: translate3d(0, 0, 0);
-    opacity: 1;
-    @include transition(transform 0.5s cubic-bezier(0.77, 0, 0.175, 1), width 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.5s ease);
   }
 
   &__list {
     list-style-type: none;
     width: 100%;
+    @include padMrg(margin-top, 2.5em);
   }
 
   &__items {
     text-align: center;
     @include display(block);
-    // @include padMrg(padding, 1em);
+    @include padMrg(padding, 1em);
     @include border(bottom, rgba($white, 0.3));
   }
 
   &__close-btn {
-    border: 1px solid red;
+    float: right;
     color: $white;
-    font-size: $baseFontSize * 2.2;
+    font-size: 2rem;
     cursor: pointer;
     font-weight: $light;
     line-height: 1;
-    @include padMrg(margin, 10px 20px);
-    @include position(absolute, $top: 20px,  $right: 0);
+    @include position(absolute, $top: 30px,  $right: 20px);
+    @include transition(transform 0.3s ease 0.1s);
+
+    @include media(550px) {
+      font-size: 1.8rem;
+      top: 13px;
+    }
+
+    &:hover {
+      transform: rotate(90deg);
+    }
   }
 }
 
-.mobile-nav-input:checked ~ .wrapper .mobile-nav {
-  transform: tanslate3d(0, 0, 0);
-  @include position(absolute, 0, 0);
-}

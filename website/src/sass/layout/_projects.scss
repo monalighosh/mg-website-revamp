@@ -2,13 +2,11 @@
   @include position();
 
   &__content {
-    border: 1px solid red;
     @include padMrg(margin, 0 auto);
     @include padMrg(padding, 15em 0);
   }
 
   &__tx-content {
-    border: 1px solid red;
     width: 100%;
     max-width: 1300px;
     @include padMrg(margin, 0 auto 2.5em);
@@ -30,24 +28,28 @@
       max-width: 750px;
     }
 
+    @include media(850px) {
+      max-width: 650px;
+    }
+
     @include media(750px) {
       max-width: 600px;
     }
 
     @include media(650px) {
-      max-width: 550px;
+      max-width: 500px;
     }
 
     @include media(550px) {
-      max-width: 450px;
+      max-width: 400px;
     }
 
     @include media(450px) {
-      max-width: 350px;
+      max-width: 300px;
     }
 
     @include media(350px) {
-      max-width: 300px;
+      max-width: 275px;
     }
   }
 
