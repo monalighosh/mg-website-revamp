@@ -4,7 +4,7 @@
   border: 0;
   cursor: pointer;
   @include display(none);
-  @include position(fixed, $top: 38px,  $right: 1.2em);
+  @include position(fixed, $top: 25px,  $right: 1.2em);
   @include transition(transform 0.5s ease 0.1s);
 
   @include media(850px) {

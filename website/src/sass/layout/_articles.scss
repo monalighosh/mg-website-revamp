@@ -5,6 +5,20 @@
   &__content {
     @include padMrg(margin, 0 auto);
     @include padMrg(padding, 15em 0);
+
+    @include media(800px) {
+       @include padMrg(padding, 10em 0);
+    }
+
+    @include media(650px) {
+      @media (orientation: landscape) {
+         @include padMrg(padding, 7em 0);
+      }
+    }
+
+    @include media(450px) {
+      @include padMrg(padding, 8em 0);
+    }
   }
 
   &__tx-content {

@@ -11,6 +11,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height:100%;
   overflow-x: hidden;
+
+  @include media(450px) {
+    font-size: 0.9rem;
+  }
 }
 
 h1 {
@@ -30,17 +34,23 @@ h1 {
     font-size: $baseFontSize * 2.3;
   }
 
+  @include media(650px) {
+    @media (orientation: landscape) {
+      font-size: $baseFontSize * 1.7;
+    }
+  }
+
   @include media(550px) {
     font-size: $baseFontSize * 2.1;
   }
 
   @include media(450px) {
-    font-size: $baseFontSize * 2;
+    font-size: $baseFontSize * 1.5;
   }
 
-  @include media(350px) {
-    font-size: $baseFontSize * 1.8;
-  }
+  // @include media(350px) {
+  //   font-size: $baseFontSize * 1.8;
+  // }
 }
 
 h2 {

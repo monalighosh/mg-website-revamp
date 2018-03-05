@@ -4,6 +4,20 @@
   &__content {
     @include padMrg(margin, 0 auto);
     @include padMrg(padding, 15em 0);
+
+    @include media(800px) {
+       @include padMrg(padding, 10em 0);
+    }
+
+    @include media(650px) {
+      @media (orientation: landscape) {
+         @include padMrg(padding, 7em 0);
+      }
+    }
+
+    @include media(450px) {
+       @include padMrg(padding, 8em 0);
+    }
   }
 
   &__tx-content {
@@ -128,15 +142,59 @@
       opacity: 1;
       background: $blue;
       color: $white;
-      transform: translate3d(-100%, -95%, 0);
-      @include position(absolute, 95%);
+      transform: translate3d(-100%, -93%, 0);
+      @include position(absolute, 93%);
       @include padMrg(padding, 0.5em 1em);
       @include transition(opacity 0.35s, transform 0.35s);
+
+      @include media(2000px) {
+        @include position(absolute, 90%);
+        transform: translate3d(-100%, -90%, 0);
+      }
+
+      @include media(1650px) {
+        @include padMrg(padding, 0.5em 0.7em);
+      }
+
+      @include media(1150px) {
+        font-size: $baseFontSize / 1.1;
+      }
+
+      @include media(700px) {
+        @include position(absolute, 86%);
+        transform: translate3d(-100%, -86%, 0);
+      }
+
+      @include media(550px) {
+        @include position(absolute, 92%);
+        transform: translate3d(-100%, -92%, 0);
+      }
+
+      @include media(400px) {
+        @include position(absolute, 88%);
+        transform: translate3d(-100%, -88%, 0);
+      }
     }
 
     &:hover p {
       opacity: 1;
-      transform: translate3d(0, -95%, 0);
+      transform: translate3d(0, -93%, 0);
+
+      @include media(2000px) {
+        transform: translate3d(0, -90%, 0);
+      }
+
+      @include media(700px) {
+        transform: translate3d(0, -86%, 0);
+      }
+
+      @include media(550px) {
+        transform: translate3d(0, -92%, 0);
+      }
+
+      @include media(400px) {
+        transform: translate3d(0, -88%, 0);
+      }
     }
   }
 
@@ -159,7 +217,6 @@
 
   &__modal-content {
     font-weight: $normal;
-    // border: 1px solid orange;
     display: flex;
     justify-content: space-between;
     @include position();
@@ -170,7 +227,6 @@
   }
 
   &__modal-text {
-    border: 1px solid red;
     @include media(2250px) {
       flex: 1 0 0;
     }
@@ -222,7 +278,6 @@
 
   &__modal-img {
     text-align: right;
-    // border: 1px solid blue;
 
     @include media(2250px) {
       flex: 2 0 0;

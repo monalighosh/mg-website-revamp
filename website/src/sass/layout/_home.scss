@@ -4,6 +4,12 @@
   overflow: hidden;
   height: 100vh;
   @include position();
+
+  @include media(650px) {
+    @media (orientation: landscape) {
+       min-height: 650px;
+    }
+  }
 }
 
 .home {
@@ -13,6 +19,10 @@
     color: $white;
     font-weight: $light;
     @extend %positionCenter;
+
+    @include media(450px) {
+      @include padMrg(margin-top, 1.1rem);
+    }
   }
 
   a:after {

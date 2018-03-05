@@ -9,6 +9,16 @@
   @include position(fixed, 0, 0);
   @include transition(height 0.3s ease);
 
+  @include media(2200px) {
+    background: rgba($blue, 0.1);
+    height: 70px;
+    line-height: 70px;
+  }
+
+  @include media(1400px) {
+    background: rgba($blue, 0.7);
+  }
+
   @include media(550px) {
     @include padMrg(padding, 0 1em);
   }
@@ -41,7 +51,6 @@
     &:hover .header__logo-back {
       transform: rotateY(0deg);
     }
-
   }
 
   &__logo-back,
@@ -175,8 +184,8 @@
 // Comact header styles
 .compact-header {
   background: $blue; 
-  height: 60px; 
-  line-height: 60px; 
+  height: 70px; 
+  line-height: 70px; 
   // box-shadow: 0 0 20px 10px rgba($black, 0.2);
 }
 
