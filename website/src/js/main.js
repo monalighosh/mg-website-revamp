@@ -24,23 +24,25 @@
     // To check if it is page bottom
     let yPos = windowY + window.innerHeight;
     // To scroll window smoothly at given speed
-    // let animator = setTimeout(() => {scrollToSection(e)}, speed);
+    let animator = setTimeout(() => {scrollToSection(e)}, speed);
     // Checks if 
-    // if(yPos > bodyHeight) {
-    //   clearTimeout(animator);
-    // } else {
-    //   if(windowY < sectionY - distance) {
-    //     scrollY = windowY + distance;
-    //     window.scrollTo(0, scrollY);
-    //   } else if (windowY > sectionY) {
-    //     scrollY = windowY - distance;
-    //     window.scrollTo(0, scrollY);
-    //   } else {
-    //     clearTimeout(animator);
-    //   }
-    // }
-    console.log(windowY);
+    if(yPos >= bodyHeight) {
+      clearTimeout(animator);
+    } else {
+      if(windowY < sectionY - distance) {
+        scrollY = windowY + distance;
+        window.scrollTo(0, scrollY);
+      } else if (windowY > sectionY) {
+        scrollY = windowY - distance;
+        window.scrollTo(0, scrollY);
+      } else {
+        clearTimeout(animator);
+      }
+    }
+    console.log(windowY, yPos, bodyHeight, sectionY);
   }
+
+
 
   // Function to add an active class to the link button
   // const lis = [...document.querySelectorAll(".header__nav-items")];
@@ -56,5 +58,4 @@
   //     }
   //   }
   // }
-
 })();

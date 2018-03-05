@@ -61,14 +61,15 @@
   &__list {
     list-style-type: none;
     width: 100%;
-    @include padMrg(margin-top, 2.5em);
+    @include padMrg(margin-top, 6em);
   }
 
   &__items {
     text-align: center;
+    font-size: $largeFont;
     @include display(block);
-    @include padMrg(padding, 1em);
-    @include border(bottom, rgba($white, 0.3));
+    @include padMrg(padding, 1.5em);
+    @include border(bottom, rgba($black, 0.3));
   }
 
   &__close-btn {

@@ -6,7 +6,12 @@
   const sectionProjects = document.querySelector("#projects");
   const mobileNavBtn = document.querySelector(".mobile-nav-btn");
   const header = document.querySelector(".header");
+  const mobileNav = document.querySelector(".mobile-nav");
+  const mobileCloseBtn = document.querySelector(".mobile-nav__close-btn");
   window.addEventListener("scroll", showCompactHeader);
+  mobileNavBtn.addEventListener("click", showMobileNav);
+  mobileCloseBtn.addEventListener("click", hideMobileNav);
+  mobileNav.addEventListener("click", hideMobileNav);
 
   function showCompactHeader() {
     let currentY = window.pageYOffset;
@@ -24,13 +29,13 @@
   /* 
     Mobile nav functionality
   */
-  const mobileNav = document.querySelector(".mobile-nav");
-  const mobileCloseBtn = document.querySelector(".mobile-nav__close-btn");
-  mobileNavBtn.addEventListener("click", toggleMobileNav);
-  mobileCloseBtn.addEventListener("click", toggleMobileNav);
-
-  function toggleMobileNav(e) {
-    mobileNav.classList.toggle("mobile-nav--active");
+  // Function to show mobile menu on click
+  function showMobileNav(e) {
+    mobileNav.classList.add("mobile-nav--active");
   }
 
+  // Function to display relevant section and hide full screen mobile menu
+  function hideMobileNav(e) {
+    mobileNav.classList.remove("mobile-nav--active");
+  }
 })();
