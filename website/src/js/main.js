@@ -32,7 +32,7 @@
       if(windowY < sectionY - distance) {
         scrollY = windowY + distance;
         window.scrollTo(0, scrollY);
-      } else if (windowY > sectionY) {
+      } else if (yPos >= bodyHeight) {
         scrollY = windowY - distance;
         window.scrollTo(0, scrollY);
       } else {

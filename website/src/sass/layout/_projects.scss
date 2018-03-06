@@ -206,7 +206,7 @@
   }
 
   &__modal-wrapper {
-    width: 80%;
+    width: 70%;
     transform: translate3d(-50%, -50%, 0);
     @include position(absolute, 50%, 50%);
 
@@ -220,6 +220,7 @@
     display: flex;
     justify-content: space-between;
     @include position();
+    @include transition(opacity 0.5s ease 0.5s);
 
     @include media(1850px) {
       flex-direction: column-reverse;
@@ -288,7 +289,9 @@
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
+      max-width: 1094px;
+      height: auto;
     }
   }
 
@@ -323,13 +326,19 @@
 
   &--content-active {
     opacity: 1;
-    // @include position(fixed, 0, 0, 0);
-    @include transition(opacity 0.5s ease, left 1s ease 0.5s);
+    @include transition(opacity 0.5s ease);
+
+    .projects__modal-content {
+      opacity: 1;
+    }
   }
 
   &--content-inactive {
     opacity: 0;
-    // @include position(fixed, 0, -150%, 0);
-    @include transition(opacity 0.5s ease, left 1s ease 0.5s);
+    @include transition(opacity 0.5s ease);
+
+    .projects__modal-content {
+      opacity: 0;
+    }
   }
 }
