@@ -159,6 +159,11 @@
   //     }
   //   }
   // }
+
+  // Console custom message
+  console.log("%c\n(\uFF61\u25D5\u203F\u25D5\uFF61) \n    ", "color: #045afa");
+  console.log("%c Hi there, fellow developer! Thanks for visiting.", "padding: 9px; background:#045afa; line-height:25px; color: #fff;");
+  console.log("%c I'd love to hear what you think!", "padding: 9px; background:#05dc81; line-height:25px; color: #fff;");
 })();
 "use strict";
 

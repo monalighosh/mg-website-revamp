@@ -58,4 +58,11 @@
   //     }
   //   }
   // }
+
+  // Console custom message
+  console.log(`%c
+(｡◕‿◕｡) 
+    `, "color: #045afa");
+  console.log(`%c Hi there, fellow developer! Thanks for visiting.` ,"padding: 9px; background:#045afa; line-height:25px; color: #fff;");
+  console.log(`%c I'd love to hear what you think!` ,"padding: 9px; background:#05dc81; line-height:25px; color: #fff;");
 })();
