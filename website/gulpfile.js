@@ -16,6 +16,7 @@ const htmlFiles = "src/**/*.html";
 const sassFiles = "src/sass/**/*.scss";
 const imageFiles = "src/images/**/*";
 const jsFiles = "src/js/**/*.js";
+const phpFiles = "src/php/**/*.php";
 const vendorFiles = "src/vendor-assets/**/*";
 
 // HTML Tasks
@@ -46,7 +47,7 @@ gulp.task("js", function(){
   return gulp.src(jsFiles)
   .pipe(babel({presets: ["env"]}))
   .pipe(concat("all.js"))
-  // .pipe(uglify())
+  .pipe(uglify())
   .pipe(gulp.dest("build/js"));
 });
 
@@ -54,6 +55,12 @@ gulp.task("js", function(){
 gulp.task('libs', function(){
     return gulp.src("node_modules/babel-polyfill/dist/polyfill.js")
     .pipe(gulp.dest('build/libs'));
+});
+
+// Php tasks
+gulp.task("php", function(){
+  return gulp.src(phpFiles)
+  .pipe(gulp.dest("build/php"));
 });
 
 // Vendor assets
@@ -68,9 +75,10 @@ gulp.task("watch", function(){
   gulp.watch(sassFiles, ["css"]);
   gulp.watch(imageFiles, ["images"]);
   gulp.watch(jsFiles, ["js"]);
+  gulp.watch(phpFiles, ["php"]);
   gulp.watch("node_modules/babel-polyfill/dist/polyfill.js", ["libs"]);
   gulp.watch(vendorFiles, ["vendors"]);
 });
 
 // Default Task
-gulp.task("default", ["html", "css", "images", "js", "libs", "vendors", "watch"]);
+gulp.task("default", ["html", "css", "images", "js", "php", "libs", "vendors", "watch"]);

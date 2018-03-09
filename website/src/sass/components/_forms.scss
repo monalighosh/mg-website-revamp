@@ -37,6 +37,11 @@ textarea:focus {
   background: $greyHighLight;
 }
 
+input:-webkit-autofill {
+  -webkit-text-fill-color: $greyMedLight !important;
+  @include shadow(box-shadow, 0 0 0px 1000px white inset);
+}
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: lighten($black, 65%);
 }
@@ -64,3 +69,4 @@ textarea:focus {
   @include padMrg(margin, 1.2em 0);
   @include transition(opacity 0.5s ease);
 }
+

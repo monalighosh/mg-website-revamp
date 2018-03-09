@@ -27,15 +27,15 @@ function submitFormData(e) {
 
   // Create AJAX request to load the success or fail message without reloading page
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", formAction);
+  xhr.open("POST", "php/form.php");
   xhr.onload = function() {
     // If AJAX request status is success and response text from php form is "success" proceed further
     if(xhr.status === 200) {
-      if(xhr.responseText == "success") {
+      if(xhr.responseText == "Form submitted successfully!") {
         // Append new div element to form which displays thank you message
         messageDiv.style.opacity = "1";
         messageDiv.style.display = "block";
-        messageDiv.innerHTML = `Thanks for being awesome ${formData.name}! <br/>I will get back to you as soon as possible.`;
+        messageDiv.innerHTML = `Thanks for being awesome ${formData.name}! I will get back to you as soon as possible.`;
         // Reset form
         e.target.reset();
       } else {

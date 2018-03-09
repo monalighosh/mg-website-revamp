@@ -101,7 +101,7 @@
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       img: "pro-view-large-puzzle.jpg",
       srcset: "images/pro-view-small-puzzle.jpg 500w, images/pro-view-med-puzzle.jpg 800w, images/pro-view-large-puzzle.jpg 1094w",
-      demoLink: "https://monalighosh.github.io/Hexagon-puzzle",
+      demoLink: "https://monalighosh.github.io/hexagon-puzzle-game",
       githubLink: "https://github.com/monalighosh/Hexagon-puzzle"
     },
     {
