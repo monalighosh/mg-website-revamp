@@ -53,6 +53,63 @@
   }
 })();
 "use strict";
+// Register submit event on contact form
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+var form = document.querySelector("#contact-form");
+form.addEventListener("submit", submitFormData);
+
+// Function to submit form data and display success or fail message
+function submitFormData(e) {
+  e.preventDefault();
+  // Get form elements
+  var formEles = [].concat(_toConsumableArray(e.target.elements));
+  // New object to store user's data
+  var formData = {};
+  // Add form element's name attribute and value to newly created object
+  formEles.forEach(function (ele) {
+    if (ele.tagName !== "BUTTON") {
+      var attr = ele.getAttribute("name");
+      formData[attr] = ele.value;
+    }
+  });
+  // Create FormData object to store user's data tobe used in AJAX request
+  var formDataToSend = new FormData();
+  for (var key in formData) {
+    formDataToSend.append(key, formData[key]);
+  }
+  // Create new div element for the form to display success or failure message
+  var messageDiv = document.querySelector(".form-submit-message");
+
+  // Create AJAX request to load the success or fail message without reloading page
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", formAction);
+  xhr.onload = function () {
+    // If AJAX request status is success and response text from php form is "success" proceed further
+    if (xhr.status === 200) {
+      if (xhr.responseText == "success") {
+        // Append new div element to form which displays thank you message
+        messageDiv.style.opacity = "1";
+        messageDiv.style.display = "block";
+        messageDiv.innerHTML = "Thanks for being awesome " + formData.name + "! <br/>I will get back to you as soon as possible.";
+        // Reset form
+        e.target.reset();
+      } else {
+        // Append new div element to form which displays failure message
+        messageDiv.style.opacity = "1";
+        messageDiv.style.display = "block";
+        messageDiv.innerHTML = "Sorry, form submission failed! Try again later!";
+      }
+    }
+  };
+  // If AJAX request fails, log error message to console
+  xhr.onerror = function () {
+    console.error("Request failed: " + xhr.responseText);
+  };
+  xhr.send(formDataToSend);
+}
+"use strict";
 
 (function () {
   "use strict";
@@ -285,8 +342,8 @@
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     img: "pro-view-large-innovative-gallery.jpg",
     srcset: "images/pro-view-small-innovative-gallery.jpg 500w, images/pro-view-med-innovative-gallery.jpg 800w, images/pro-view-large-innovative-gallery.jpg 1094w",
-    demoLink: "https://codepen.io/monalighosh/full/QQpzoy",
-    githubLink: "https://github.com/monalighosh/JavaScript30/tree/master/Day05"
+    demoLink: "https://monalighosh.github.io/innovative-image-gallery",
+    githubLink: "https://github.com/monalighosh/innovative-image-gallery"
   }, {
     id: 11,
     name: "Update CSS Variables with JS",

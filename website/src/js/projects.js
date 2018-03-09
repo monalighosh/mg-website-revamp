@@ -125,8 +125,8 @@
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       img: "pro-view-large-innovative-gallery.jpg",
       srcset: "images/pro-view-small-innovative-gallery.jpg 500w, images/pro-view-med-innovative-gallery.jpg 800w, images/pro-view-large-innovative-gallery.jpg 1094w",
-      demoLink: "https://codepen.io/monalighosh/full/QQpzoy",
-      githubLink: "https://github.com/monalighosh/JavaScript30/tree/master/Day05"
+      demoLink: "https://monalighosh.github.io/innovative-image-gallery",
+      githubLink: "https://github.com/monalighosh/innovative-image-gallery"
     },
     {
       id: 11,

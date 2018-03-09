@@ -54,3 +54,13 @@ textarea:focus {
   color: lighten($black, 65%);
   opacity: 1;
 }
+
+.form-submit-message {
+  opacity: 0;
+  background: lighten($blue, 40%);
+  color: $blueDark;
+  @include display(none);
+  @include padMrg(padding, 0.7em);
+  @include padMrg(margin, 1.2em 0);
+  @include transition(opacity 0.5s ease);
+}

@@ -286,4 +286,13 @@
       @include padMrg(margin-right, 0.5em);
     }
   }
+
+  &__imgs {
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 923px;
+    }
+  }
 }

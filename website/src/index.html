@@ -226,24 +226,25 @@
           <p></p>
           <p>I would love to hear from you! Use the form below for any project enquiries or simply say hello at <a href="mailto:hello@monalighosh.com" title="Email me at hello@monalighosh.com">hello@monalighosh.com</a>.</p>
           <div class="contact__form-content">
-            <form action="#" method="POST" enctype="text/plain" name="contact-form" id="contact-form">
+            <form action="php/form.php" method="POST" enctype="text/plain" name="contact-form" id="contact-form">
               <div>
                 <label for="name">Name</label>
-                <span class="contact__form--input-hover"><input type="text" id="name" placeholder="Your full name" required></span>
+                <span class="contact__form--input-hover"><input type="text" name="name" id="name" placeholder="Your full name" required></span>
               </div>
               <div>
                 <label for="email">Email</label>
-                <span class="contact__form--input-hover"><input type="email" id="email" placeholder="Your active email id" required></span>
+                <span class="contact__form--input-hover"><input type="email" name="email" id="email" placeholder="Your active email id" required></span>
               </div>
               <div>
                 <label for="tel">Telephone number</label>
-                <span class="contact__form--input-hover"><input type="tel" id="tel" placeholder="Your number"></span>
+                <span class="contact__form--input-hover"><input type="tel" name="tel" id="tel" placeholder="Your number"></span>
               </div>
               <div>
                 <label for="message">Your message</label>
-                <span class="contact__form--input-hover"><textarea name="message" id="message" placeholder="Drop me a line"></textarea></span>
+                <span class="contact__form--input-hover"><textarea name="message" name="message" id="message" placeholder="Drop me a line"></textarea></span>
               </div>
               <button type="submit"><span data-letters="Send">Send</span></button>
+              <div class="form-submit-message"></div>
             </form>
           </div>
         </div>
