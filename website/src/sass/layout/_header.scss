@@ -33,7 +33,7 @@
     height: 30px;
     text-align: center;
     transform: translate3d(0, -50%, 0);
-    cursor: default;
+    // cursor: default;
     perspective: 800px;
     overflow: hidden;
     @include position(absolute, 50%);
@@ -179,6 +179,10 @@
 
   &__nav-links:hover span:before {
     width: $fullCover;
+  }
+
+  ::selection {
+    background: $turquoiseBlue;
   }
 }
 // Comact header styles

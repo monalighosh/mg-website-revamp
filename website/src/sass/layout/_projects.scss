@@ -115,7 +115,7 @@
       content: "";
       width: $fullCover;
       height: $fullCover;
-      background: rgba($blueDark, 0.25);
+      background: rgba($blueDark, 0.5);
       @include position(absolute, 0, 0);
       @include transition(all 0.3s ease-in-out);
     }
@@ -140,7 +140,7 @@
 
     p {
       opacity: 1;
-      background: $blue;
+      background: rgba($blue, 0.9);
       color: $white;
       transform: translate3d(-100%, -93%, 0);
       @include position(absolute, 93%);
