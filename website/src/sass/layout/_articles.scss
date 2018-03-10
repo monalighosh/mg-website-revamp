@@ -89,10 +89,10 @@
   }
 
   &__item {
-    background: rgba($black, 0.08);
+    // background: rgba($black, 0.08);
     flex: 0 0 23%;
     overflow: hidden;
-    @include padMrg(margin, 1%);
+    @include padMrg(margin, 1em);
     @include position();
 
     @include media(1150px) {
@@ -105,31 +105,31 @@
     }
 
     h2 {
-      font-size: $largeFont;
+      font-size: $baseFontSize * 1.3;
       color: $white;
-      @include padMrg(padding, 1em 1em 0);
+      @include padMrg(padding, 1em 1em 0 0);
     }
 
     p {
-      @include padMrg(padding, 0 1em 1em);
+      @include padMrg(padding, 0 1em 2.5em 0);
       @include transition(all 0.5s ease);
     }
 
     button {
-      transform: translate(-100%, -60px);
-      @include position(absolute, 100%, 0);
-      @include padMrg(margin, 1em 0 0);
+      transform: translate(0, -96%);
+      @include position(absolute, 96%, 0);
+      @include padMrg(margin, 1em 1em 0 0);
       &:after {
         background: $white;
       }
     }
 
     &:hover button {
-      transform: translate(0, -60px);
+      // transform: translate(0, -60px);
     }
 
     &:hover p {
-      @include padMrg(padding, 0 1em 2.5em);
+      // @include padMrg(padding, 0 1em 2.5em);
     }
 
     &:hover span:after {

@@ -117,7 +117,7 @@
       height: $fullCover;
       background: rgba($blueDark, 0.5);
       @include position(absolute, 0, 0);
-      @include transition(all 0.3s ease-in-out);
+      @include transition(all 0.2s ease-in-out);
     }
 
     &:hover:after {
@@ -130,7 +130,7 @@
       opacity: 0.9;
       display: block;
       transform: translate3d(-40px, 0, 0);
-      @include transition(opacity 0.35s, transform 0.35s);
+      @include transition(opacity 0.2s, transform 0.35s);
     }
 
     &:hover img {

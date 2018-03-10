@@ -33,12 +33,13 @@
   &__heading {
     color: $white;
     line-height: $headingLine;
-    @include shadow(text-shadow, 0 0 20px rgba($white, 0.3));
+    @include shadow(text-shadow, 0 0 20px rgba($white, 0.35));
 
     span {
       background: $turquoiseBlue;
       color: $blue;
       @include padMrg(padding, 0 0.2em);
+      @include padMrg(margin-right, 5px);
 
       &::selection {
         color: $turquoiseBlue;
