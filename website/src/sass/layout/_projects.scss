@@ -9,7 +9,7 @@
        @include padMrg(padding, 11em 0);
     }
 
-    @include media(800px) {
+    @include media(900px) {
        @include padMrg(padding, 10em 0);
     }
 
@@ -219,13 +219,16 @@
       width: 85%;
     }
 
-    @include media(1050px) {
+    @include media(800px) {
+      width: 90%;
+    }
+
+    @include media(600px) {
       width: 85%;
     }
   }
 
   &__modal-content {
-    // border: 1px solid red;
     font-weight: $normal;
     display: flex;
     justify-content: space-between;
@@ -238,7 +241,7 @@
   }
 
   &__modal-text {
-    // border: 1px solid blue;
+    border: 1px solid red;
     @include padMrg(margin-right, 1em);
     @include media(2250px) {
       flex: 1 0 0;
@@ -263,11 +266,9 @@
 
           p:last-child span {
             font-weight: $normal;
-            @include padMrg(margin-right, 2em);
+            @include padMrg(margin-right, 1.6em);
           }
         }
-
-        
       }
     }
 
@@ -316,10 +317,13 @@
   &__modal-text-subhead {
     font-size: $mediumFont;
     font-weight: $bold;
+
+    @include media(800px) {
+      font-size: $baseFontSize;
+    }
   }
 
   &__modal-img {
-    // border: 1px solid green;
     text-align: right;
 
     @include media(2250px) {
@@ -345,6 +349,12 @@
 
       @include media(1050px) {
          width: 53%;
+      }
+
+      @include media(1050px) {
+        @media (orientation: portrait) {
+         width: 75%;
+        }
       }
     }
   }

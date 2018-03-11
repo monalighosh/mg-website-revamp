@@ -66,6 +66,14 @@
       transform-origin: top left;
       @include transition(all 0.3s ease-in-out);
 
+      @include media(800px) {
+        max-width: 20px;
+      }
+
+      @include media(350px) {
+        max-width: 18px;
+      }
+
       &:hover {
         fill: $turquoiseBlue;
         transform: scale(1.2);

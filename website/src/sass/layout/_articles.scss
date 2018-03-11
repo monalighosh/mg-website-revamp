@@ -10,7 +10,7 @@
        @include padMrg(padding, 11em 0);
     }
 
-    @include media(800px) {
+    @include media(900px) {
        @include padMrg(padding, 10em 0);
     }
 
@@ -93,7 +93,6 @@
   }
 
   &__item {
-    // background: rgba($black, 0.08);
     flex: 1 0 22.5%;
     overflow: hidden;
     @include padMrg(margin, 1em 1em 1.5em 1em);
@@ -104,8 +103,8 @@
     }
 
     @include media(550px) {
-     flex: 1 0 100%;
-     @include padMrg(margin, 2% 0);
+      flex: 1 0 100%;
+      @include padMrg(margin, 0 1em 1.5em 0);
     }
 
     h2 {
@@ -130,14 +129,6 @@
       &:after {
         background: $white;
       }
-    }
-
-    &:hover button {
-      // transform: translate(0, -60px);
-    }
-
-    &:hover p {
-      // @include padMrg(padding, 0 1em 2.5em);
     }
 
     &:hover span:after {

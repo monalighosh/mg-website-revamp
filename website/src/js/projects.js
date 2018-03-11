@@ -193,7 +193,7 @@
   function appendProjectDetails(event) {
     let currentProject = event.target;
     for(let project of projectData) {
-      if(project.id === parseInt(currentProject.id) && window.innerWidth > 1100) {
+      if((project.id === parseInt(currentProject.id) && window.innerWidth > 1100) || (project.id === parseInt(currentProject.id) && window.innerWidth < 601)) {
         textOutput = `<h1>${project.name}</h1>
                   <p class="projects__modal-text-subhead">${project.work}</p>
                   <p>${project.description}</p>

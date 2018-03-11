@@ -19,10 +19,10 @@
     // Checks if user has scrolled upto project section, if yes, modify the header styling
     if(currentY >= projectsY) {
       header.classList.add("compact-header");
-      mobileNavBtn.style.top = "25px";
+      mobileNavBtn.style.top = "20px";
     } else {
       header.classList.remove("compact-header");
-      mobileNavBtn.style.top = "25px";
+      mobileNavBtn.style.top = "20px";
     }
   }
 

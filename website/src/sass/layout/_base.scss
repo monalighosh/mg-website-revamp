@@ -39,6 +39,10 @@ h1 {
     font-size: $baseFontSize * 2;
   }
 
+  @include media(800px) {
+    font-size: $baseFontSize * 1.7;
+  }
+
   @include media(650px) {
     @media (orientation: landscape) {
       font-size: $baseFontSize * 1.6;
@@ -46,16 +50,16 @@ h1 {
   }
 
   @include media(550px) {
-    font-size: $baseFontSize * 2.1;
+    font-size: $baseFontSize * 1.5;
   }
 
   @include media(450px) {
     font-size: $baseFontSize * 1.5;
   }
 
-  // @include media(350px) {
-  //   font-size: $baseFontSize * 1.8;
-  // }
+  @include media(350px) {
+    font-size: $baseFontSize * 1.2;
+  }
 }
 
 h2 {
@@ -168,6 +172,10 @@ a:active {
 
 .content-full-width {
   width: 95%;
+
+  @include media(550px) {
+   width: 90%;
+  }
 }
 
 // * {
