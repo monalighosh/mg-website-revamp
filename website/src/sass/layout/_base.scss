@@ -13,8 +13,12 @@ body {
   // height:100%;
   overflow-x: hidden;
 
-  @include media(450px) {
+  @include media(1300px) {
     font-size: 0.9rem;
+  }
+
+  @include media(450px) {
+    font-size: 0.8rem;
   }
 }
 
@@ -23,21 +27,21 @@ h1 {
   color: $h1Color;
   font-weight: $bold;
 
-  @include media(1350px) {
-    font-size: $baseFontSize * 2.7;
-  }
-
-  @include media(1150px) {
+  @include media(1400px) {
     font-size: $baseFontSize * 2.5;
   }
 
-  @include media(950px) {
+  @include media(1300px) {
     font-size: $baseFontSize * 2.3;
+  }
+
+  @include media(1100px) {
+    font-size: $baseFontSize * 2;
   }
 
   @include media(650px) {
     @media (orientation: landscape) {
-      font-size: $baseFontSize * 1.7;
+      font-size: $baseFontSize * 1.6;
     }
   }
 

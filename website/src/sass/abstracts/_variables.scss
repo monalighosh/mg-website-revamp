@@ -1,5 +1,5 @@
 // Site colors
-$blue: rgb(4,90,250); // #045afa
+$blue: darken(rgb(4,90,250), 0); // #045afa
 $blueMidDark: darken($blue, 6%);
 $blueDark: darken($blue, 25%);
 $navyBlue: darken($blue, 36%);

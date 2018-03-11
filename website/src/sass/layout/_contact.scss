@@ -3,7 +3,11 @@
 
   &__content {
     @include padMrg(margin, 0 auto);
-    @include padMrg(padding, 15em 0);
+    @include padMrg(padding, 13em 0);
+
+    @include media(1300px) {
+       @include padMrg(padding, 11em 0);
+    }
 
     @include media(800px) {
        @include padMrg(padding, 10em 0);
