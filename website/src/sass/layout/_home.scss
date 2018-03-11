@@ -10,6 +10,12 @@
        min-height: 650px;
     }
   }
+
+  @include media(400px) {
+    @media (max-height: 700px) {
+       min-height: 850px;
+    }
+  }
 }
 
 .home {
@@ -54,7 +60,6 @@
   }
 
   &__social-item {
-    // border: 1px solid white;
     @include display();
     @include padMrg(margin-right, 2em);
 

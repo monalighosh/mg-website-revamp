@@ -241,7 +241,6 @@
   }
 
   &__modal-text {
-    border: 1px solid red;
     @include padMrg(margin-right, 1em);
     @include media(2250px) {
       flex: 1 0 0;
@@ -295,18 +294,6 @@
       @include media(1050px) {
         font-size: $baseFontSize * 1.4;
       }
-
-      // @include media(850px) {
-      //   font-size: $baseFontSize * 2;
-      // }
-
-      // @include media(650px) {
-      //   font-size: $baseFontSize * 1.8;
-      // }
-
-      // @include media(450px) {
-      //   font-size: $baseFontSize * 1.6;
-      // }
     }
 
     span {

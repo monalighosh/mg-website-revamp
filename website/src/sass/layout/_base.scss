@@ -54,7 +54,7 @@ h1 {
   }
 
   @include media(450px) {
-    font-size: $baseFontSize * 1.5;
+    font-size: $baseFontSize * 1.2;
   }
 
   @include media(350px) {
