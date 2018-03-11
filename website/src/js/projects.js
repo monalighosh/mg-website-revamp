@@ -193,19 +193,37 @@
   function appendProjectDetails(event) {
     let currentProject = event.target;
     for(let project of projectData) {
-      if(project.id === parseInt(currentProject.id)) {
+      if(project.id === parseInt(currentProject.id) && window.innerWidth > 1100) {
         textOutput = `<h1>${project.name}</h1>
-                  <p>${project.work}</p>
+                  <p class="projects__modal-text-subhead">${project.work}</p>
                   <p>${project.description}</p>
                   <p><span>Technology stack</span>: ${project.stack}</p>
                   <p><span>Tools used</span>: ${project.tools}</p>
-                  <p><a href="${project.demoLink}" title="Live Demo" target="_blank">Live Demo</a></p>
+                  <p><a href="${project.demoLink}" title="Live Demo" target="_blank">Launch Project</a></p>
                   <p><a href="${project.githubLink}" title="View Github Repository" target="_blank">Github Repo</a></p>`;
         imgOutput = `<img src="images/${project.img}" srcset="${project.srcset}" alt="${project.name} Large View"/>`;          
         modalTxDiv.innerHTML = textOutput;
         modalImgDiv.innerHTML = imgOutput;
         break;
-      }
+      } else if(project.id === parseInt(currentProject.id) && window.innerWidth <= 1100) {
+        textOutput = `<h1>${project.name}</h1>
+                      <div>
+                        <p class="projects__modal-text-subhead">${project.work}</p>
+                        <p>${project.description}</p>
+                      </div>
+                      <div>
+                        <p><span>Technology stack</span>: ${project.stack}</p>
+                        <p><span>Tools used</span>: ${project.tools}</p>
+                        <p>
+                        <span><a href="${project.demoLink}" title="Live Demo" target="_blank">Launch Project</a></span>
+                        <span><a href="${project.githubLink}" title="View Github Repository" target="_blank">Github Repo</a></span>
+                        </p>
+                      </div>`;
+        imgOutput = `<img src="images/${project.img}" srcset="${project.srcset}" alt="${project.name} Large View"/>`;          
+        modalTxDiv.innerHTML = textOutput;
+        modalImgDiv.innerHTML = imgOutput;
+        break;
+      } 
     }
   }
     

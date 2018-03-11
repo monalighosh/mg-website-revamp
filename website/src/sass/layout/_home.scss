@@ -20,7 +20,7 @@
     font-weight: $light;
     @extend %positionCenter;
 
-    @include media(450px) {
+    @include media(1050px) {
       @include padMrg(margin-top, 1.1rem);
     }
   }

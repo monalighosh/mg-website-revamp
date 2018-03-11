@@ -206,6 +206,7 @@
     background: $white;
     z-index: 150;
     overflow: hidden;
+    overflow-y: scroll;
     @include position(fixed, 0, 0, 0, 0);
   }
 
@@ -224,7 +225,7 @@
   }
 
   &__modal-content {
-    border: 1px solid red;
+    // border: 1px solid red;
     font-weight: $normal;
     display: flex;
     justify-content: space-between;
@@ -237,7 +238,7 @@
   }
 
   &__modal-text {
-    border: 1px solid blue;
+    // border: 1px solid blue;
     @include padMrg(margin-right, 1em);
     @include media(2250px) {
       flex: 1 0 0;
@@ -247,6 +248,27 @@
       flex: 0 1 40%;
       align-self: center;
       @include padMrg(margin-top, 1em);
+    }
+
+    @include media(1100px) {
+      > div {
+        width: 46%;
+
+        &:nth-of-type(1) {
+          float: left;
+        }
+
+        &:nth-of-type(2) {
+          float: right;
+
+          p:last-child span {
+            font-weight: $normal;
+            @include padMrg(margin-right, 2em);
+          }
+        }
+
+        
+      }
     }
 
     h1 {
@@ -266,7 +288,11 @@
       }
 
       @include media(1100px) {
-        font-size: $baseFontSize * 1.8;
+        font-size: $baseFontSize * 1.7;
+      }
+
+      @include media(1050px) {
+        font-size: $baseFontSize * 1.4;
       }
 
       // @include media(850px) {
@@ -282,18 +308,18 @@
       // }
     }
 
-    p:nth-of-type(1) {
-      font-size: $mediumFont;
-      font-weight: $bold;
-    }
-
     span {
       font-weight: $bold;
     }
   }
 
+  &__modal-text-subhead {
+    font-size: $mediumFont;
+    font-weight: $bold;
+  }
+
   &__modal-img {
-    border: 1px solid green;
+    // border: 1px solid green;
     text-align: right;
 
     @include media(2250px) {
@@ -314,8 +340,11 @@
       height: auto;
 
       @include media(1100px) {
-        width: 50%;
-        max-width: 600px;
+        width: 63%;
+      }
+
+      @include media(1050px) {
+         width: 53%;
       }
     }
   }
