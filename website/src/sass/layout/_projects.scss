@@ -294,6 +294,17 @@
       @include media(1050px) {
         font-size: $baseFontSize * 1.4;
       }
+
+      @include media(450px) {
+        font-size: $baseFontSize * 1.1;
+      }
+    }
+
+    p:last-child {
+      span {
+        font-weight: $normal;
+        @include padMrg(margin-right, 1.6em);
+      }
     }
 
     span {
@@ -307,6 +318,10 @@
 
     @include media(800px) {
       font-size: $baseFontSize;
+    }
+
+    @include media(450px) {
+      font-size: 108%;
     }
   }
 
@@ -355,6 +370,10 @@
     opacity: 0;
     @include padMrg(padding, 0.3em 0.7em);
     @include transition(opacity 0.5s ease 0.5s, background 0.5s ease);
+
+    @include media(1100px) {
+      font-size: $mediumFont;
+    }
 
     &:hover {
       background: $turquoiseBlue;

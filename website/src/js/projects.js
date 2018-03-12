@@ -38,7 +38,7 @@
       work: "JavaScript Project",
       stack: "HTML, CSS, JavaScript",
       tools: "Sublime Text, Chrome Dev Tools, Github, Codepen",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      description: "Page displays a collection of letters that corresponds with a key on the keyboard, and the name of the soundclip to be played when that button is clicked.",
       img: "pro-view-large-drum.jpg",
       srcset: "images/pro-view-small-drum.jpg 500w, images/pro-view-med-drum.jpg 800w, images/pro-view-large-drum.jpg 1094w",
       demoLink: "https://codepen.io/monalighosh/full/NyRrNZ",
@@ -199,8 +199,10 @@
                   <p>${project.description}</p>
                   <p><span>Technology stack</span>: ${project.stack}</p>
                   <p><span>Tools used</span>: ${project.tools}</p>
-                  <p><a href="${project.demoLink}" title="Live Demo" target="_blank">Launch Project</a></p>
-                  <p><a href="${project.githubLink}" title="View Github Repository" target="_blank">Github Repo</a></p>`;
+                  <p>
+                    <span><a href="${project.demoLink}" title="Live Demo" target="_blank">Launch Project</a></span>
+                    <span><a href="${project.githubLink}" title="View Github Repository" target="_blank">Github Repo</a></span>
+                  </p>`;
         imgOutput = `<img src="images/${project.img}" srcset="${project.srcset}" alt="${project.name} Large View"/>`;          
         modalTxDiv.innerHTML = textOutput;
         modalImgDiv.innerHTML = imgOutput;
