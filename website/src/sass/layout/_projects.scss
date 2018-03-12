@@ -303,7 +303,7 @@
     p:last-child {
       span {
         font-weight: $normal;
-        @include padMrg(margin-right, 1.6em);
+        @include padMrg(margin-right, 1.5em);
       }
     }
 
