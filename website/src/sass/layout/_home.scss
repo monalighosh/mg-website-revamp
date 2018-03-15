@@ -13,13 +13,16 @@
 
   @include media(400px) {
     @media (max-height: 700px) {
-       min-height: 775px;
+       min-height: 675px;
     }
   }
 }
 
 .home {
   background: $blue;
+  cursor: url(../images/cursor-green.png), 
+          url(../images/cursor-green.cur), 
+          default; 
 
   &__content {
     color: $white;

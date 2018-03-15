@@ -5,6 +5,9 @@
   overflow: hidden;
   width: $fullCover;
   z-index: 100;
+  cursor: url(../images/cursor-green.png), 
+          url(../images/cursor-green.cur), 
+          default; 
   @include padMrg(padding, 0 1.5em);
   @include position(fixed, 0, 0);
   @include transition(height 0.3s ease);
@@ -33,7 +36,6 @@
     height: 30px;
     text-align: center;
     transform: translate3d(0, -50%, 0);
-    // cursor: default;
     perspective: 800px;
     overflow: hidden;
     @include position(absolute, 50%);
@@ -61,16 +63,16 @@
   }
 
   &__logo-back {
-    background: $white url(../images/logo-g.png) no-repeat;
-    background-position: 75% 55%;
-    color: $blueDark;
+    background: $white url(../images/g.svg) no-repeat;
+    background-size: 45px 45px;
+    background-position: 70% 25%;
     transform: rotateY(180deg);
   }
 
   &__logo-front {
-    background: $turquoiseBlue url(../images/logo-m.png) no-repeat;
-    background-position: 30% 20%;
-    color: $blueDark;
+    background: $white url(../images/m.svg) no-repeat;
+    background-size: 40px 40px;
+    background-position: 12% 20%;
     transform: rotateY(0deg);
   }
 
@@ -190,6 +192,7 @@
   background: $blue; 
   height: 60px; 
   line-height: 60px; 
+  cursor: default;
 }
 
 // Active link

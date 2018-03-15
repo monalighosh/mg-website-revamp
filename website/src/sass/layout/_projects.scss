@@ -20,7 +20,7 @@
     }
 
     @include media(450px) {
-       @include padMrg(padding, 8em 0);
+       @include padMrg(padding, 5em 0);
     }
   }
 

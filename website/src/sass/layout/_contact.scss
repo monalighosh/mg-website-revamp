@@ -20,7 +20,7 @@
     }
 
     @include media(450px) {
-       @include padMrg(padding, 8em 0);
+       @include padMrg(padding, 5em 0);
     }
   }
 
@@ -43,8 +43,8 @@
     overflow: hidden;
     width: $fullCover;
 
-    #contact-form {
-      > div {
+    form {
+      > div:not(.form-submit-message) {
         display: flex;
         justify-content: flex-start;
         @include position();

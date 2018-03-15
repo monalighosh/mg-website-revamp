@@ -5,7 +5,7 @@
   font-weight: $normal;
   text-align: center;
   width: $fullCover;
-  line-height: 0.9;
+  overflow: hidden;
   @include padMrg(padding, 1em);
 
   @include media(650px) {
@@ -13,6 +13,6 @@
   }
 
   span {
-    color: $red;
+    color: $red !important;
   }
 }
