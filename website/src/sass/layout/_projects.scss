@@ -147,10 +147,11 @@
       background: rgba($blue, 0.9);
       color: $white;
       // transform: translateY(100%);
-      @include position(absolute, 0, 0, 0 ,0);
+      @include position(absolute, $bottom: -50px, $left: 0);
       @include padMrg(padding, 0.5em 1em);
       @include padMrg(margin, 0);
-      @include transition(opacity 0.35s, transform 0.35s);
+      @include transition(all 0.35s cubic-bezier(.17,.67,0,1.81));
+      // @include transition(opacity 0.35s, transform 0.35s);
       // transform: translate3d(-100%, -93%, 0);
       // @include position(absolute, 93%);
 
@@ -185,7 +186,7 @@
 
     &:hover p {
       opacity: 1;
-      // transform: translate3d(0, -93%, 0);
+      @include position(absolute, $bottom: 0, $left: 0);
 
       @include media(2000px) {
         transform: translate3d(0, -90%, 0);
