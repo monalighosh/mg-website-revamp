@@ -147,7 +147,7 @@
       background: rgba($blue, 0.9);
       color: $white;
       // transform: translateY(100%);
-      @include position(absolute, $bottom: -50px, $left: 0);
+      @include position(absolute, $bottom: -60px, $left: 0);
       @include padMrg(padding, 0.5em 1em);
       @include padMrg(margin, 0);
       @include transition(all 0.35s cubic-bezier(.17,.67,0,1.81));
@@ -188,21 +188,21 @@
       opacity: 1;
       @include position(absolute, $bottom: 0, $left: 0);
 
-      @include media(2000px) {
-        transform: translate3d(0, -90%, 0);
-      }
+      // @include media(2000px) {
+      //   transform: translate3d(0, -90%, 0);
+      // }
 
-      @include media(700px) {
-        transform: translate3d(0, -86%, 0);
-      }
+      // @include media(700px) {
+      //   transform: translate3d(0, -86%, 0);
+      // }
 
-      @include media(550px) {
-        transform: translate3d(0, -92%, 0);
-      }
+      // @include media(550px) {
+      //   transform: translate3d(0, -92%, 0);
+      // }
 
-      @include media(400px) {
-        transform: translate3d(0, -88%, 0);
-      }
+      // @include media(400px) {
+      //   transform: translate3d(0, -88%, 0);
+      // }
     }
   }
 
