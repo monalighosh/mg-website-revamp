@@ -42,7 +42,7 @@
   &__heading {
     color: $white;
     line-height: $headingLine;
-    @include shadow(text-shadow, 0 0 20px rgba($white, 0.35));
+    @include shadow(text-shadow, 0 0 20px rgba($white, 0.2));
 
     span {
       background: $turquoiseBlue;
