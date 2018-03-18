@@ -3,7 +3,8 @@
 %positionCenter {
   transform: translateY(-50%);
   @include padMrg(margin, 50vh auto 0);
-  @include position();
+  // @include position();
   // transform: perspective(1px) translate3d(-50%, -50%, 0);
   // @include position(absolute, 50%, 50%);
 }
+

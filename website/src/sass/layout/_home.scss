@@ -1,5 +1,4 @@
 #particles-js {
-  background: $blue;
   z-index: 0;
   overflow: hidden;
   height: 100vh;
@@ -25,6 +24,7 @@
           default; 
 
   &__content {
+    background: $blue;
     color: $white;
     font-weight: $light;
     @extend %positionCenter;
@@ -42,7 +42,7 @@
   &__heading {
     color: $white;
     line-height: $headingLine;
-    @include shadow(text-shadow, 0 0 20px rgba($white, 0.2));
+    @include shadow(text-shadow, 0 0 20px rgba($white, 0.3));
 
     span {
       background: $turquoiseBlue;
