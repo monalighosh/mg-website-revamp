@@ -8,3 +8,10 @@
   // @include position(absolute, 50%, 50%);
 }
 
+%positionCenterHome {
+  // transform: translateY(-50%);
+  // @include padMrg(margin, 50vh auto 0);
+  @include position(fixed, 50%, 50%);
+}
+
+

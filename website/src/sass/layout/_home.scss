@@ -23,15 +23,25 @@
           url(../images/cursor-green.cur), 
           default; 
 
-  &__content {
-    background: $blue;
+  &__content-wrapper {
     color: $white;
     font-weight: $light;
-    @extend %positionCenter;
+    transform: translate(-50%, -50%);
+    @include position(absolute, 50%, 50%);
 
     @include media(1050px) {
       @include padMrg(margin-top, 1.1rem);
     }
+  }        
+
+  &__content {
+    // color: $white;
+    // font-weight: $light;
+    // @extend %positionCenterHome;
+
+    // @include media(1050px) {
+    //   @include padMrg(margin-top, 1.1rem);
+    // }
   }
 
   a:after {
