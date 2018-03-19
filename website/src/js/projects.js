@@ -121,7 +121,7 @@
       name: "Innovative Image Gallery",
       work: "JavaScript Project",
       stack: "HTML, CSS, JavaScript",
-      tools: "Photoshop, Sublime Text, SASS, Chrome Dev Tools, Github, Codepen",
+      tools: "Photoshop, Sublime Text, SASS, Chrome Dev Tools, Github",
       description: "An innovative gallery component that can be used as an alternative to standard image gallery.",
       img: "pro-view-large-innovative-gallery.jpg",
       srcset: "images/pro-view-small-innovative-gallery.jpg 500w, images/pro-view-med-innovative-gallery.jpg 800w, images/pro-view-large-innovative-gallery.jpg 1094w",
@@ -193,7 +193,7 @@
   function appendProjectDetails(event) {
     let currentProject = event.target;
     for(let project of projectData) {
-      if((project.id === parseInt(currentProject.id) && window.innerWidth > 1100) || (project.id === parseInt(currentProject.id) && window.innerWidth < 601)) {
+      if(project.id === parseInt(currentProject.id) && (window.innerWidth > 1100 || window.innerWidth < 601)) {
         textOutput = `<h1>${project.name}</h1>
                   <p class="projects__modal-text-subhead">${project.work}</p>
                   <p>${project.description}</p>
@@ -207,7 +207,20 @@
         modalTxDiv.innerHTML = textOutput;
         modalImgDiv.innerHTML = imgOutput;
         break;
-      } else if(project.id === parseInt(currentProject.id) && window.innerWidth <= 1100) {
+      } else if (project.id === parseInt(currentProject.id) && (window.innerHeight <  window.innerWidth)) {
+        textOutput = `<h1>${project.name} <span>(${project.work})</span></h1>
+                  <p>${project.description}</p>
+                  <p><span>Technology stack</span>: ${project.stack}</p>
+                  <p><span>Tools used</span>: ${project.tools}</p>
+                  <p>
+                    <span><a href="${project.demoLink}" title="Live Demo" target="_blank">Launch Project</a></span>
+                    <span><a href="${project.githubLink}" title="View Github Repository" target="_blank">Github Repo</a></span>
+                  </p>`;
+        imgOutput = `<img src="images/${project.img}" srcset="${project.srcset}" alt="${project.name} Large View"/>`;          
+        modalTxDiv.innerHTML = textOutput;
+        modalImgDiv.innerHTML = imgOutput;
+        break;
+      } else if(project.id === parseInt(currentProject.id) && window.innerWidth <= 1100 && window.innerHeight > 400) {
         textOutput = `<h1>${project.name}</h1>
                       <div>
                         <p class="projects__modal-text-subhead">${project.work}</p>
@@ -225,7 +238,7 @@
         modalTxDiv.innerHTML = textOutput;
         modalImgDiv.innerHTML = imgOutput;
         break;
-      } 
+      }
     }
   }
     

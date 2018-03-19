@@ -213,7 +213,7 @@
     @include position(fixed, 0, 0, 0, 0);
 
     @include media(400px) {
-      overflow-y: scroll;
+      // overflow-y: scroll;
     }
   }
 
@@ -284,6 +284,18 @@
       }
     }
 
+    @include media(750px) {
+      @media (orientation: landscape) {
+        font-size: $baseFontSize / 1.3;
+      }
+    }
+
+    @include media(600px) {
+      @media (max-height: 320px) {
+        line-height: 1.2;
+      }
+    }
+
     h1 {
       color: $blue;
       line-height: 1.3;
@@ -311,6 +323,18 @@
       @include media(450px) {
         font-size: $baseFontSize * 1.1;
       }
+
+      @include media(750px) {
+        @media (orientation: landscape) {
+          font-size: $baseFontSize;
+        }
+      }
+
+      span {
+        color: $greyDark;
+        font-weight: $normal;
+        font-size: $baseFontSize / 1.1;
+      }
     }
 
     p:last-child {
@@ -335,6 +359,12 @@
 
     @include media(450px) {
       font-size: 108%;
+    }
+
+    @include media(750px) {
+      @media (orientation: landscape) {
+        font-size: $baseFontSize / 1.2;
+      }
     }
   }
 
@@ -369,6 +399,18 @@
       @include media(1050px) {
         @media (orientation: portrait) {
          width: 75%;
+        }
+      }
+
+      @include media(750px) {
+        @media (orientation: landscape) {
+          max-width: 35%;
+        }
+      }
+
+      @include media(600px) {
+        @media (max-height: 320px) {
+          max-width: 30%;
         }
       }
     }

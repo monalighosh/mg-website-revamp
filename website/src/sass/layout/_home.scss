@@ -4,7 +4,7 @@
   height: 100vh;
   @include position();
 
-  @include media(650px) {
+  @include media(750px) {
     @media (orientation: landscape) {
        min-height: 650px;
     }
@@ -13,6 +13,12 @@
   @include media(400px) {
     @media (max-height: 700px) {
        min-height: 675px;
+    }
+  }
+
+  @include media(320px) {
+    @media (max-height: 700px) {
+       min-height: 710px;
     }
   }
 }

@@ -62,6 +62,12 @@
     list-style-type: none;
     width: 100%;
     @include padMrg(margin-top, 6em);
+
+    @include media(900px) {
+      @media (orientation: landscape) {
+        @include padMrg(margin-top, 1em);
+      }
+    }
   }
 
   &__items {
@@ -69,10 +75,16 @@
     font-size: $largeFont;
     @include display(block);
     @include padMrg(padding, 1.5em);
-    @include border(bottom, rgba($black, 0.3));
+    @include border(bottom, rgba($white, 0.3));
 
     &:last-child {
       @include border(bottom, rgba($black, 0));
+    }
+
+    @include media(900px) {
+      @media (orientation: landscape) {
+         @include padMrg(padding, 1em);
+      }
     }
   }
 
