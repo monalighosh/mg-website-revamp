@@ -180,7 +180,7 @@
       content: "";
       width: $fullCover;
       height: $fullCover;
-      background: rgba($blueDark, 0.5);
+      background: rgba($blueDark, 0.2);
       @include position(absolute, 0, 0);
       @include transition(all 0.3s ease-in-out);
     }
