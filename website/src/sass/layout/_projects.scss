@@ -77,7 +77,7 @@
     span {
       color: $white;
       background: $blue;
-      @include padMrg(padding, 0 0.2em);
+      @include padMrg(padding, 0 0.2em 0.2em 0.2em);
 
       &::selection {
         color: $blue;
