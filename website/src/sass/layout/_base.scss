@@ -1,5 +1,6 @@
 html {
   height:100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,7 +11,6 @@ body {
   letter-spacing: 0.06rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // height:100%;
   overflow-x: hidden;
 
   @include media(1300px) {
@@ -80,6 +80,29 @@ h3 {
   @include position();
 }
 
+.skip-to-content {
+  &,
+  &:link,
+  &:visited {
+    background: $turquoiseBlue;
+    color: $blue;
+    font-weight: $bold;
+    left: 50%;
+    position: absolute;
+    transform: translateY(-100%);
+    z-index: 200;
+    @include padMrg(padding, 0.5em 1em);
+  
+    @include media(550px) {
+      @include padMrg(padding, 0.5em 1em);
+    }
+  }
+
+  &:focus {
+    transform: translateY(0%);
+  }
+}
+
 main {
   width: $fullCover;
   @include position();
@@ -96,6 +119,7 @@ p {
 a:link,
 a:visited {
   color: $blueMidDark;
+  text-decoration: underline;
   @include transition(all 0.5s ease);
   @include position();
 }
@@ -105,19 +129,19 @@ a:active {
   color: $greyDark;
 }
 
-// a:after {
-//   content: "";
-//   width: $fullCover;
-//   height: 1px;
-//   background: $turquoiseBlue;
-//   @include position(absolute, 100%, 0);
-//   @include transition(all 0.5s ease);
-// }
+a:focus {
+  outline-color: $blue;
+  outline-style: dashed;
+  outline-offset: toRems(5px);
+}
 
-// a:hover:after,
-// a:active:after {
-//   // background: $blue;
-// }
+button:focus {
+  background-color: $white;
+  color: $blue;
+  outline-color: $white;
+  outline-width: toRems(1px);
+  outline-style: solid;
+}
 
 ::selection {
   color: $white;
@@ -177,10 +201,6 @@ a:active {
    width: 90%;
   }
 }
-
-// * {
-//   cursor: url(../images/cursor-green.png), default;
-// }
 
 ::-webkit-scrollbar {
     width: 10px;

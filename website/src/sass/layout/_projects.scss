@@ -107,6 +107,14 @@
     @include media(550px) {
      flex: 1 0 100%;
     }
+
+    &:focus {
+      color: $white;
+      outline-style: dashed;
+      outline-offset: toRems(0);
+      outline-color: $white;
+      outline-width: toRems(2px);
+    }
   }
 
   &__gallery-img {
@@ -146,63 +154,15 @@
       opacity: 1;
       background: rgba($blue, 0.9);
       color: $white;
-      // transform: translateY(100%);
       @include position(absolute, $bottom: -60px, $left: 0);
       @include padMrg(padding, 0.5em 1em);
       @include padMrg(margin, 0);
       @include transition(all 0.35s cubic-bezier(.17,.67,0,1.81));
-      // @include transition(opacity 0.35s, transform 0.35s);
-      // transform: translate3d(-100%, -93%, 0);
-      // @include position(absolute, 93%);
-
-      // @include media(2000px) {
-      //   @include position(absolute, 90%);
-      //   transform: translate3d(-100%, -90%, 0);
-      // }
-
-      // @include media(1650px) {
-      //   @include padMrg(padding, 0.5em 0.7em);
-      // }
-
-      // @include media(1150px) {
-      //   font-size: $baseFontSize / 1.1;
-      // }
-
-      // @include media(700px) {
-      //   @include position(absolute, 86%);
-      //   transform: translate3d(-100%, -86%, 0);
-      // }
-
-      // @include media(550px) {
-      //   @include position(absolute, 92%);
-      //   transform: translate3d(-100%, -92%, 0);
-      // }
-
-      // @include media(400px) {
-      //   @include position(absolute, 88%);
-      //   transform: translate3d(-100%, -88%, 0);
-      // }
     }
 
     &:hover p {
       opacity: 1;
       @include position(absolute, $bottom: 0, $left: 0);
-
-      // @include media(2000px) {
-      //   transform: translate3d(0, -90%, 0);
-      // }
-
-      // @include media(700px) {
-      //   transform: translate3d(0, -86%, 0);
-      // }
-
-      // @include media(550px) {
-      //   transform: translate3d(0, -92%, 0);
-      // }
-
-      // @include media(400px) {
-      //   transform: translate3d(0, -88%, 0);
-      // }
     }
   }
 
@@ -211,19 +171,10 @@
     z-index: 150;
     overflow: hidden;
     @include position(fixed, 0, 0, 0, 0);
-
-    @include media(400px) {
-      // overflow-y: scroll;
-    }
   }
 
   &__modal-wrapper {
     width: 70%;
-    // transform: perspective(1px) translate3d(-50%, -50%, 0);
-    // transform-style: preserve-3d;
-    // @include position(absolute, 50%, 50%);
-    // top: 50%;
-    // @include padMrg(margin-left, auto);
     transform: translateY(-50%);
     @include padMrg(margin, 50vh auto 0);
     @include position();

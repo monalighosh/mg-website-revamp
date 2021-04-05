@@ -5,9 +5,6 @@
   overflow: hidden;
   width: $fullCover;
   z-index: 100;
-  // cursor: url(../images/cursor-green.png), 
-  //         url(../images/cursor-green.cur), 
-  //         default; 
   @include padMrg(padding, 0 1.5em);
   @include position(fixed, 0, 0);
   @include transition(height 0.3s ease);
@@ -78,7 +75,7 @@
 
   &__logo-name {
     font-size: $largeFont;
-    font-weight: $normal;
+    font-weight: $mediumBold;
     color: $white;
     @include padMrg(margin-left, 50px);
 
@@ -117,7 +114,7 @@
   &__nav-links:link,
   &__nav-links:visited {
     color: $white;
-    font-weight: $normal;
+    font-weight: $mediumBold;
     @include padMrg(padding, 0.2em 0.5em);
     @include position();
     @include transition(color 0.3s ease-in-out 0.3s);
@@ -126,6 +123,12 @@
   &__nav-links:hover,
   &__nav-links:active {
     color: $turquoiseBlue;
+  }
+
+  &__nav-links:focus {
+    border: toRems(1px) dashed $white;
+    color: $turquoiseBlue;
+    outline: none;
   }
 
   &__nav-links:before,
@@ -172,7 +175,7 @@
     width: 0;
     overflow: hidden;
     white-space: nowrap;
-    // font-weight: $mediumBold;
+    font-weight: $mediumBold;
     transform: translate(0, -50%);
     @include display(block);
     @include position(absolute, 50%, 0);

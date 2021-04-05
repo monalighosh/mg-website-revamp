@@ -95,7 +95,7 @@
   &__item {
     flex: 1 0 22.5%;
     overflow: hidden;
-    @include padMrg(margin, 1em 1em 1.5em 1em);
+    @include padMrg(margin, 1em 0 1.5em 0);
     @include position();
 
     @include media(1300px) {
@@ -104,51 +104,32 @@
 
     @include media(550px) {
       flex: 1 0 100%;
-      @include padMrg(margin, 0 1em 1.5em 0);
+      @include padMrg(margin, 0 0 3em 0);
+    }
+
+    &:last-child {
+      @include padMrg(margin, 1em 0em 1.5em 0);
+
+      @include media(550px) {
+        @include padMrg(margin, 0 0 0 0);
+      }
     }
 
     h2 {
       font-size: $baseFontSize * 1.2;
-      color: $white;
+      font-weight: $bold;
+      color: $blue;
       @include padMrg(padding, 1em 1em 0 0);
 
       @include media(1300px) {
        font-size: $baseFontSize * 1.1;
       }
-
-      // @include media(550px) {
-      //   max-width: 400px;
-      //   @include padMrg(margin, 0 auto);
-      //   @include padMrg(padding, 1em 1em 0 0);
-      // }
-
-      // @include media(450px) {
-      //   max-width: 300px;
-      // }
-
-      // @include media(350px) {
-      //   max-width: 275px;
-      // }
     }
 
     p {
       @include padMrg(padding, 0 1em 2.5em 0);
       @include transition(all 0.5s ease);
       @include position();
-
-      // @include media(550px) {
-      //   max-width: 400px;
-      //   @include padMrg(margin-left, auto);
-      //   @include padMrg(margin-right, auto);
-      // }
-
-      // @include media(450px) {
-      //   max-width: 300px;
-      // }
-
-      // @include media(350px) {
-      //   max-width: 275px;
-      // }
     }
 
     button {
@@ -199,7 +180,6 @@
 
 // Article pages
 .article-page {
-  // background: lighten($turquoiseBlue, 3%);
 
   &__close-btn {
     float: right;

@@ -25,9 +25,6 @@
 
 .home {
   background: $blue;
-  // cursor: url(../images/cursor-green.png), 
-  //         url(../images/cursor-green.cur), 
-  //         default; 
 
   &__content-wrapper {
     color: $white;
@@ -41,13 +38,7 @@
   }        
 
   &__content {
-    // color: $white;
-    // font-weight: $light;
-    // @extend %positionCenterHome;
-
-    // @include media(1050px) {
-    //   @include padMrg(margin-top, 1.1rem);
-    // }
+    font-weight: $medium;
   }
 
   a:after {
@@ -101,6 +92,14 @@
       &:hover {
         fill: $turquoiseBlue;
         transform: scale(1.2);
+      }
+    }
+
+    a {
+      &:focus {
+        color: $white;
+        outline-color: $white;
+        outline-offset: toRems(7px);
       }
     }
   }

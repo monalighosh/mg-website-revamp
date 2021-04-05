@@ -84,6 +84,14 @@
       > div > span:hover:after {
         height: $fullCover;
       }
+
+      button:focus {
+        background-color: $turquoiseBlue;
+        color: $blue;
+        outline-color: $turquoiseBlue;
+        outline-width: toRems(1px);
+        outline-style: solid;
+      }
     }
   }
 }

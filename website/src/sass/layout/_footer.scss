@@ -1,8 +1,8 @@
 .page-footer {
   background: $greyDark;
-  color: lighten($black, 50%);
+  color: lighten($black, 60%);
   font-size: $smallFont;
-  font-weight: $normal;
+  font-weight: $mediumBold;
   text-align: center;
   width: $fullCover;
   overflow: hidden;
@@ -12,7 +12,7 @@
     line-height: 1.6;
   }
 
-  span {
-    color: $red !important;
+  &__icon {
+    color: $red;
   }
 }

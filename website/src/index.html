@@ -3,22 +3,32 @@
 <head>
   <!-- Basic page needs -->
   <meta charset="utf-8">
-  <title>Monali Ghosh | Front End Desinger/Developer from Melbourne</title>
-  <meta name="description" content="Experienced front end designer and developer based in Melbourne. Builds modern responsive, SEO optimised and websites and web applications.">
+  <title>Monali Ghosh | Front End Developer | Canberra, Australia</title>
+  <meta name="description" content="Experienced front end developer based in Canberra, Australia. Passionate for developing responsive, W3C certified websites.">
   <!-- Responsive specific meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Fonts and icons -->
-  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async></script>
   <!-- CSS -->
   <link rel="stylesheet" href="css/main.css">
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="images/favicons/site.webmanifest">
+  <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#05dc81">
+  <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
   <!-- Script - Babel polyfill -->
-  <script src="libs/polyfill.js"></script>
+  <script src="libs/polyfill.js" defer></script>
 </head>
 <body>
   <div class="wrapper">
+    <!-- Skip to main content -->
+    <a href="#main" title="Skip to main content" class="skip-to-content">Skip to main content</a>
+
     <!-- Mobile menu -->
     <div class="mobile-nav-btn" title="Menu">
       <span></span>
@@ -53,7 +63,7 @@
       </nav>
     </header>
     <!-- Main content -->
-    <main>
+    <main id="main">
       <!-- Section home -->
       <section class="home" id="home">
         <div id="particles-js">
@@ -91,75 +101,75 @@
             <p>Take some time to look at my work. Here you'll find a short selection of my design, development and experiments. Want to see more? See my recent work on <a href="https://github.com/monalighosh" target="_blank" title="See my projects on Github">Github</a> and <a href="https://codepen.io/monalighosh/" target="_blank" title="See my projects on Codepen">Codepen</a>.</p>
           </div>
             <ul class="projects__gallery-list">
-              <li class="projects__gallery-item">
+              <li class="projects__gallery-item" tabindex="1">
                 <span class="projects__gallery-img" id="1">
-                  <img src="images/pro-large-thumb-apc.jpg" srcset="images/pro-small-thumb-apc.jpg 350w, images/pro-med-thumb-apc.jpg 550w, images/pro-large-thumb-apc.jpg 800w" alt="APC Pharma Website Thumbnail">
+                  <img src="images/pro-large-thumb-apc.jpg" srcset="images/pro-small-thumb-apc.jpg 350w, images/pro-med-thumb-apc.jpg 550w, images/pro-large-thumb-apc.jpg 600w" alt="APC Pharma Website Thumbnail">
                   <p>APC Pharma Website</p>
                 </span>
               </li>
-              <li class="projects__gallery-item">
+              <li class="projects__gallery-item" tabindex="1">
                <span class="projects__gallery-img" id="2">
-                <img src="images/pro-large-thumb-tickybot.jpg" srcset="images/pro-small-thumb-tickybot.jpg 350w, images/pro-med-thumb-tickybot.jpg 550w, images/pro-large-thumb-tickybot.jpg 800w" alt="TickyBot Website Thumbnail">
+                <img src="images/pro-large-thumb-tickybot.jpg" srcset="images/pro-small-thumb-tickybot.jpg 350w, images/pro-med-thumb-tickybot.jpg 550w, images/pro-large-thumb-tickybot.jpg 600w" alt="TickyBot Website Thumbnail">
                 <p>TickyBot Website</p>
               </span>
               </li>
-              <li class="projects__gallery-item">
+              <li class="projects__gallery-item" tabindex="1">
                 <span class="projects__gallery-img" id="3">
-                  <img src="images/pro-large-thumb-drum.jpg" srcset="images/pro-small-thumb-drum.jpg 350w, images/pro-med-thumb-drum.jpg 550w, images/pro-large-thumb-drum.jpg 800w" alt="Vanilla JavaScript Drum Kit Thumbnail">
+                  <img src="images/pro-large-thumb-drum.jpg" srcset="images/pro-small-thumb-drum.jpg 350w, images/pro-med-thumb-drum.jpg 550w, images/pro-large-thumb-drum.jpg 600w" alt="Vanilla JavaScript Drum Kit Thumbnail">
                   <p>Vanilla JavaScript Drum Kit</p>
                 </span>
               </li>
-              <li class="projects__gallery-item">
+              <li class="projects__gallery-item" tabindex="1">
                 <span class="projects__gallery-img" id="4">
-                  <img src="images/pro-large-thumb-pricing-table.jpg" srcset="images/pro-small-thumb-pricing-table.jpg 350w, images/pro-med-thumb-pricing-table.jpg 550w, images/pro-large-thumb-pricing-table.jpg 800w" alt="Flexbox Pricing Table Thumbnail">
+                  <img src="images/pro-large-thumb-pricing-table.jpg" srcset="images/pro-small-thumb-pricing-table.jpg 350w, images/pro-med-thumb-pricing-table.jpg 550w, images/pro-large-thumb-pricing-table.jpg 600w" alt="Flexbox Pricing Table Thumbnail">
                   <p>Flexbox Pricing Table</p>
                 </span>
               </li>
-              <li class="projects__gallery-item">
+              <li class="projects__gallery-item" tabindex="1">
                 <span class="projects__gallery-img" id="5">
-                  <img src="images/pro-large-thumb-customer-app.jpg" srcset="images/pro-small-thumb-customer-app.jpg 350w, images/pro-med-thumb-customer-app.jpg 550w, images/pro-large-thumb-customer-app.jpg 800w" alt="Customer Manager App Thumbnail">
+                  <img src="images/pro-large-thumb-customer-app.jpg" srcset="images/pro-small-thumb-customer-app.jpg 350w, images/pro-med-thumb-customer-app.jpg 550w, images/pro-large-thumb-customer-app.jpg 600w" alt="Customer Manager App Thumbnail">
                   <p>Customer Manager App</p>
                 </span>
               </li>
-              <li class="projects__gallery-item">
+              <li class="projects__gallery-item" tabindex="1">
                 <span class="projects__gallery-img" id="6">
-                  <img src="images/pro-large-thumb-image-gallery.jpg" srcset="images/pro-small-thumb-image-gallery.jpg 350w, images/pro-med-thumb-image-gallery.jpg 550w, images/pro-large-thumb-image-gallery.jpg 800w" alt="Flexbox Image Gallery Thumbnail">
+                  <img src="images/pro-large-thumb-image-gallery.jpg" srcset="images/pro-small-thumb-image-gallery.jpg 350w, images/pro-med-thumb-image-gallery.jpg 550w, images/pro-large-thumb-image-gallery.jpg 600w" alt="Flexbox Image Gallery Thumbnail">
                   <p>Flexbox Image Gallery</p>
                 </span>
               </li>
-              <li class="projects__gallery-item">
+              <li class="projects__gallery-item" tabindex="1">
                 <span class="projects__gallery-img" id="7">
-                  <img src="images/pro-large-thumb-todo.jpg" srcset="images/pro-small-thumb-todo.jpg 350w, images/pro-med-thumb-todo.jpg 550w, images/pro-large-thumb-todo.jpg 800w" alt="jQuery ToDo App Thumbnail">
+                  <img src="images/pro-large-thumb-todo.jpg" srcset="images/pro-small-thumb-todo.jpg 350w, images/pro-med-thumb-todo.jpg 550w, images/pro-large-thumb-todo.jpg 600w" alt="jQuery ToDo App Thumbnail">
                   <p>jQuery ToDo App</p>
                 </span>
               </li>
-              <li class="projects__gallery-item">
+              <li class="projects__gallery-item" tabindex="1">
                <span class="projects__gallery-img" id="8">
-                <img src="images/pro-large-thumb-puzzle.jpg" srcset="images/pro-small-thumb-puzzle.jpg 350w, images/pro-med-thumb-puzzle.jpg 550w, images/pro-large-thumb-puzzle.jpg 800w" alt="Hexagon Jigsaw Puzzle Thumbnail">
+                <img src="images/pro-large-thumb-puzzle.jpg" srcset="images/pro-small-thumb-puzzle.jpg 350w, images/pro-med-thumb-puzzle.jpg 550w, images/pro-large-thumb-puzzle.jpg 600w" alt="Hexagon Jigsaw Puzzle Thumbnail">
                 <p>Hexagon Jigsaw Puzzle</p>
               </span>
               </li>
-              <li class="projects__gallery-item">
+              <li class="projects__gallery-item" tabindex="1">
                 <span class="projects__gallery-img" id="9">
-                  <img src="images/pro-large-thumb-flexpanel.jpg" srcset="images/pro-small-thumb-flexpanel.jpg 350w, images/pro-med-thumb-flexpanel.jpg 550w, images/pro-large-thumb-flexpanel.jpg 800w" alt="Flex Panels Image Gallery Thumbnail">
+                  <img src="images/pro-large-thumb-flexpanel.jpg" srcset="images/pro-small-thumb-flexpanel.jpg 350w, images/pro-med-thumb-flexpanel.jpg 550w, images/pro-large-thumb-flexpanel.jpg 600w" alt="Flex Panels Image Gallery Thumbnail">
                   <p>Flex Panels Image Gallery</p>
                 </span>
               </li>
-              <li class="projects__gallery-item">
+              <li class="projects__gallery-item" tabindex="1">
                <span class="projects__gallery-img" id="10">
-                <img src="images/pro-large-thumb-innovative.jpg" srcset="images/pro-small-thumb-innovative.jpg 350w, images/pro-med-thumb-innovative.jpg 550w, images/pro-large-thumb-innovative.jpg 800w" alt="Innovative Image Gallery Thumbnail">
+                <img src="images/pro-large-thumb-innovative.jpg" srcset="images/pro-small-thumb-innovative.jpg 350w, images/pro-med-thumb-innovative.jpg 550w, images/pro-large-thumb-innovative.jpg 600w" alt="Innovative Image Gallery Thumbnail">
                 <p>Innovative Image Gallery</p>
               </span>
               </li>
-              <li class="projects__gallery-item">
+              <li class="projects__gallery-item" tabindex="1">
                 <span class="projects__gallery-img" id="11">
-                  <img src="images/pro-large-thumb-css-variables.jpg" srcset="images/pro-small-thumb-css-variables.jpg 350w, images/pro-med-thumb-css-variables.jpg 550w, images/pro-large-thumb-css-variables.jpg 800w" alt="Update CSS Variables with JS Thumbnail">
+                  <img src="images/pro-large-thumb-css-variables.jpg" srcset="images/pro-small-thumb-css-variables.jpg 350w, images/pro-med-thumb-css-variables.jpg 550w, images/pro-large-thumb-css-variables.jpg 600w" alt="Update CSS Variables with JS Thumbnail">
                   <p>Update CSS Variables with JS</p>
                 </span>
               </li>
-              <li class="projects__gallery-item">
+              <li class="projects__gallery-item" tabindex="1">
                 <span class="projects__gallery-img" id="12">
-                  <img src="images/pro-large-thumb-clock.jpg" srcset="images/pro-small-thumb-clock.jpg 350w, images/pro-med-thumb-clock.jpg 550w, images/pro-large-thumb-clock.jpg 800w" alt="CSS + Vanilla JS Clock Thumbnail">
+                  <img src="images/pro-large-thumb-clock.jpg" srcset="images/pro-small-thumb-clock.jpg 350w, images/pro-med-thumb-clock.jpg 550w, images/pro-large-thumb-clock.jpg 600w" alt="CSS + Vanilla JS Clock Thumbnail">
                   <p>CSS + Vanilla JS Clock</p>
                 </span>
               </li>
@@ -186,7 +196,7 @@
           <ul class="articles__list">
             <li class="articles__item" id="a1">
               <span class="articles__img">
-                <img src="images/articles-large-thumb-tools.jpg" srcset="images/articles-small-thumb-tools.jpg 350w, images/articles-med-thumb-tools.jpg 550w, images/articles-large-thumb-tools.jpg 800w" alt="Article Tools I Can't Work Without Thumbnail">
+                <img src="images/articles-large-thumb-tools.jpg" srcset="images/articles-small-thumb-tools.jpg 350w, images/articles-med-thumb-tools.jpg 550w, images/articles-large-thumb-tools.jpg 600w" alt="Article Tools I Can't Work Without Thumbnail">
               </span>
               <h2>Tools I Can’t Work Without</h2>
               <p>As a web developer and designer I have loads of tools and softwares that I use on a daily basis. But these are the tools I really can’t work without...</p>
@@ -194,7 +204,7 @@
             </li>
             <li class="articles__item" id="a4">
               <span class="articles__img">
-                <img src="images/articles-large-thumb-aria.jpg" srcset="images/articles-small-thumb-aria.jpg 350w, images/articles-med-thumb-aria.jpg 550w, images/articles-large-thumb-aria.jpg 800w" alt="ARIA Landmark Roles Thumbnail">
+                <img src="images/articles-large-thumb-aria.jpg" srcset="images/articles-small-thumb-aria.jpg 350w, images/articles-med-thumb-aria.jpg 550w, images/articles-large-thumb-aria.jpg 600w" alt="ARIA Landmark Roles Thumbnail">
               </span>
               <h2>ARIA Landmark Roles</h2>
               <p>The Accessible Rich Internet Applications (WAI-ARIA) defines a set of roles known as document landmarks. These roles break the page into easy...</p>
@@ -202,7 +212,7 @@
             </li>
             <li class="articles__item" id="a2">
               <span class="articles__img">
-                <img src="images/articles-large-thumb-hoisting.jpg" srcset="images/articles-small-thumb-hoisting.jpg 350w, images/articles-med-thumb-hoisting.jpg 550w, images/articles-large-thumb-hoisting.jpg 800w" alt="Article JavaScript Hoisting Thumbnail">
+                <img src="images/articles-large-thumb-hoisting.jpg" srcset="images/articles-small-thumb-hoisting.jpg 350w, images/articles-med-thumb-hoisting.jpg 550w, images/articles-large-thumb-hoisting.jpg 600w" alt="Article JavaScript Hoisting Thumbnail">
               </span>
               <h2>JavaScript Hoisting</h2>
               <p>In Javascript, variable hoisting is the process of moving the variables declarations to the top of it’s scope, function scope or global scope...</p>
@@ -210,7 +220,7 @@
             </li>
             <li class="articles__item" id="a3">
               <span class="articles__img">
-                <img src="images/articles-large-thumb-closures.jpg" srcset="images/articles-small-thumb-closures.jpg 350w, images/articles-med-thumb-closures.jpg 550w, images/articles-large-thumb-closures.jpg 800w" alt="Article JavaScript Closures Thumbnail">
+                <img src="images/articles-large-thumb-closures.jpg" srcset="images/articles-small-thumb-closures.jpg 350w, images/articles-med-thumb-closures.jpg 550w, images/articles-large-thumb-closures.jpg 600w" alt="Article JavaScript Closures Thumbnail">
               </span>
               <h2>JavaScript Closures</h2>
               <p>If you go a bit further with JavaScript, you would certainly meet one of the most crucial yet confusing aspects of JavaScript Closures...</p>
@@ -253,8 +263,8 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="page-footer">
-      &copy; 2018 Monali Ghosh. All rights reserved. | Made with passion <span>&#10084;</span>
+    <footer class="page-footer  js-footer">
+      &copy; <span class="js-footer-year"></span> Monali Ghosh. All rights reserved. | Made with passion <span class="page-footer__icon">&#10084;</span>
     </footer>
   </div>
   <!-- Scripts -->
